@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+	<Transactions>
+    <Transaction>2019/10/18 18:52:45.000.055,=Z:\SINAPgrid\ProjetoEdpDMS\Fontes\SinapToolKit\TFrameEDPDMS.cpp</Transaction>
+    <Transaction>2019/10/18 18:53:08.000.155,Z:\SINAPgrid\ProjetoEdpDMS\Fontes\SinapToolKit\TFrameEDPDMS.cpp=</Transaction>
+    <Transaction>2019/10/18 18:53:31.000.848,=Z:\SINAPgrid\ProjetoEdpDMS\Fontes\SinapToolKit\Forms\TFrameEDPDMS.cpp</Transaction>
+    <Transaction>2019/10/18 18:54:26.000.806,Z:\SINAPgrid\ProjetoEdpDMS\Fontes\SinapToolKit\Forms\TFrameEDPSimplex.cpp=</Transaction>
+    <Transaction>2019/10/18 19:46:13.000.206,=Z:\SINAPgrid\ProjetoEdpDMS\DLL_Lib\Win32\Release\DMS.lib</Transaction>
+  </Transactions>
+	<ProjectSortOrder AutoSort="0" SortType="0">
+    <File Path="..\..\..\ProjetoEdpDMS"/>
+    <File Path="..\..\Fontes"/>
+    <File Path="..\..\Fontes\SinapToolKit"/>
+    <File Path="..\..\Fontes\SinapToolKit\Forms"/>
+    <File Path="..\..\Fontes\SinapToolKit\Forms\TFormStkChild.cpp"/>
+    <File Path="..\..\Fontes\SinapToolKit\Forms\TFormStkChild.cpp"/>
+    <File Path="..\..\Fontes\SinapToolKit\Forms\TFormStkChild.dfm"/>
+    <File Path="..\..\Fontes\SinapToolKit\Forms\TFormStkChild.h"/>
+    <File Path="..\..\Fontes\SinapToolKit\Forms\TFormStkMdi.cpp"/>
+    <File Path="..\..\Fontes\SinapToolKit\Forms\TFormStkMdi.cpp"/>
+    <File Path="..\..\Fontes\SinapToolKit\Forms\TFormStkMdi.dfm"/>
+    <File Path="..\..\Fontes\SinapToolKit\Forms\TFormStkMdi.h"/>
+    <File Path="..\..\Fontes\SinapToolKit\Forms\TFrameEDPDMS.cpp"/>
+    <File Path="..\..\Fontes\SinapToolKit\Forms\TFrameEDPDMS.cpp"/>
+    <File Path="..\..\Fontes\SinapToolKit\Forms\TFrameEDPDMS.dfm"/>
+    <File Path="..\..\Fontes\SinapToolKit\Forms\TFrameEDPDMS.h"/>
+    <File Path="..\..\Fontes\SinapToolKit\Socorro"/>
+    <File Path="..\..\Fontes\SinapToolKit\Socorro\TConecta.cpp"/>
+    <File Path="..\..\Fontes\SinapToolKit\Socorro\TConecta.cpp"/>
+    <File Path="..\..\Fontes\SinapToolKit\Socorro\TConecta.h"/>
+    <File Path="..\..\..\ModulosOpcionais\DLL_Lib\Win32\Release\AlocaChaves.lib"/>
+    <File Path="..\..\..\PlataformaSinap\DLL_Lib\Win32\Release\CalcIndCont.lib"/>
+    <File Path="..\..\DLL_Lib\Win32\Release\DMS.lib"/>
+    <File Path="..\..\..\ModulosOpcionais\DLL_Lib\Win32\Release\ExtratorOcorrencias.lib"/>
+    <File Path="..\..\..\PlataformaSinap\DLL_Lib\Win32\Release\Funcao.lib"/>
+    <File Path="..\..\..\PlataformaSinap\DLL_Lib\Win32\Release\Gateway.lib"/>
+    <File Path="..\..\..\ModulosOpcionais\DLL_Lib\Win32\Release\GeralMainFormAlocaChavesP1.lib"/>
+    <File Path="..\..\..\SINAPgrid\ModulosOpcionais\DLL_LIB\Win32\Release\GeralMainFormAlocaChavesP1.lib"/>
+    <File Path="..\..\..\SINAPgrid\ModulosOpcionais\DLL_LIB\Win32\Release\ImportaRedeAccess.lib"/>
+    <File Path="..\..\..\SINAPgrid\PlataformaSinap\DLL_Lib\Win32\Release\ImportaRedeGIS.lib"/>
+    <File Path="..\..\DLL_Lib\Win32\Release\ImportaRedeGIS.lib"/>
+    <File Path="..\..\..\SINAPgrid\PlataformaSinap\DLL_Lib\Win32\Release\Simulador.lib"/>
+    <File Path="SinapToolKit.cpp"/>
+    <File Path="..\..\..\SINAPgrid\PlataformaSinap\DLL_Lib\Win32\Release\Stk.lib"/>
+  </ProjectSortOrder>
+</BorlandProject>

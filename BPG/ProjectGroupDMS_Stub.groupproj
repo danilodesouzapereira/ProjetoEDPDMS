@@ -1,0 +1,72 @@
+﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <PropertyGroup>
+        <ProjectGuid>{F1515BCA-01FE-47F0-BBBE-0B2F048948AC}</ProjectGuid>
+    </PropertyGroup>
+    <ItemGroup>
+        <Projects Include="..\BPR_Stub\TopologiaDMS\TopologiaDMS.cbproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="..\BPR_Stub\FL\FL.cbproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="..\BPR_Stub\EE\EE.cbproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="..\BPR_Stub\DMS\DMS.cbproj">
+            <Dependencies/>
+        </Projects>
+    </ItemGroup>
+    <ProjectExtensions>
+        <Borland.Personality>Default.Personality.12</Borland.Personality>
+        <Borland.ProjectType/>
+        <BorlandProject>
+            <Default.Personality/>
+        </BorlandProject>
+    </ProjectExtensions>
+    <Target Name="TopologiaDMS">
+        <MSBuild Projects="..\BPR_Stub\TopologiaDMS\TopologiaDMS.cbproj"/>
+    </Target>
+    <Target Name="TopologiaDMS:Clean">
+        <MSBuild Projects="..\BPR_Stub\TopologiaDMS\TopologiaDMS.cbproj" Targets="Clean"/>
+    </Target>
+    <Target Name="TopologiaDMS:Make">
+        <MSBuild Projects="..\BPR_Stub\TopologiaDMS\TopologiaDMS.cbproj" Targets="Make"/>
+    </Target>
+    <Target Name="FL">
+        <MSBuild Projects="..\BPR_Stub\FL\FL.cbproj"/>
+    </Target>
+    <Target Name="FL:Clean">
+        <MSBuild Projects="..\BPR_Stub\FL\FL.cbproj" Targets="Clean"/>
+    </Target>
+    <Target Name="FL:Make">
+        <MSBuild Projects="..\BPR_Stub\FL\FL.cbproj" Targets="Make"/>
+    </Target>
+    <Target Name="EE">
+        <MSBuild Projects="..\BPR_Stub\EE\EE.cbproj"/>
+    </Target>
+    <Target Name="EE:Clean">
+        <MSBuild Projects="..\BPR_Stub\EE\EE.cbproj" Targets="Clean"/>
+    </Target>
+    <Target Name="EE:Make">
+        <MSBuild Projects="..\BPR_Stub\EE\EE.cbproj" Targets="Make"/>
+    </Target>
+    <Target Name="DMS">
+        <MSBuild Projects="..\BPR_Stub\DMS\DMS.cbproj"/>
+    </Target>
+    <Target Name="DMS:Clean">
+        <MSBuild Projects="..\BPR_Stub\DMS\DMS.cbproj" Targets="Clean"/>
+    </Target>
+    <Target Name="DMS:Make">
+        <MSBuild Projects="..\BPR_Stub\DMS\DMS.cbproj" Targets="Make"/>
+    </Target>
+    <Target Name="Build">
+        <CallTarget Targets="TopologiaDMS;FL;EE;DMS"/>
+    </Target>
+    <Target Name="Clean">
+        <CallTarget Targets="TopologiaDMS:Clean;FL:Clean;EE:Clean;DMS:Clean"/>
+    </Target>
+    <Target Name="Make">
+        <CallTarget Targets="TopologiaDMS:Make;FL:Make;EE:Make;DMS:Make"/>
+    </Target>
+    <Import Project="$(BDS)\Bin\CodeGear.Group.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Group.Targets')"/>
+</Project>

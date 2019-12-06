@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+	<Transactions>
+    <Transaction>2019/10/18 19:54:07.000.896,=C:\Users\Sinapsis\Documents\Embarcadero\Studio\Projects\Project1PCH1.h</Transaction>
+    <Transaction>2019/10/18 19:54:07.000.906,=C:\Users\Sinapsis\Documents\Embarcadero\Studio\Projects\File1.cpp</Transaction>
+    <Transaction>2019/10/18 19:57:14.000.657,C:\Users\Sinapsis\Documents\Embarcadero\Studio\Projects\File1.cpp=Z:\SINAPgrid\ProjetoEdpDMS\BPR\EE\EE.cpp</Transaction>
+    <Transaction>2019/10/18 19:57:22.000.890,C:\Users\Sinapsis\Documents\Embarcadero\Studio\Projects\Project1PCH1.h=Z:\SINAPgrid\ProjetoEdpDMS\BPR\EE\EEPCH1.h</Transaction>
+    <Transaction>2019/10/18 19:57:27.000.898,C:\Users\Sinapsis\Documents\Embarcadero\Studio\Projects\Project1.cbproj=Z:\SINAPgrid\ProjetoEdpDMS\BPR\EE\EE.cbproj</Transaction>
+    <Transaction>2019/10/18 19:58:47.000.875,=Z:\SINAPgrid\ProjetoEdpDMS\DLL_Inc\EE.h</Transaction>
+    <Transaction>2019/10/18 20:02:55.000.009,=Z:\SINAPgrid\ProjetoEdpDMS\BPR\EE\Unit1.cpp</Transaction>
+    <Transaction>2019/10/18 20:03:06.000.778,Z:\SINAPgrid\ProjetoEdpDMS\BPR\EE\Unit1.h=Z:\SINAPgrid\ProjetoEdpDMS\Fontes\EE\TEE.h</Transaction>
+    <Transaction>2019/10/18 20:03:06.000.778,Z:\SINAPgrid\ProjetoEdpDMS\BPR\EE\Unit1.cpp=Z:\SINAPgrid\ProjetoEdpDMS\Fontes\EE\TEE.cpp</Transaction>
+    <Transaction>2019/10/19 09:17:48.000.571,Z:\SINAPgrid\ProjetoEdpDMS\Fontes\EE\TEE.cpp=</Transaction>
+    <Transaction>2019/10/19 09:18:59.000.043,Z:\SINAPgrid\ProjetoEdpDMS\DLL_Inc\EE.h=</Transaction>
+  </Transactions>
+</BorlandProject>

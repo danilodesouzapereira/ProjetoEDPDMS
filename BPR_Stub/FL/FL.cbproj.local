@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+	<Transactions>
+    <Transaction>2019/10/18 20:14:20.000.203,=C:\Users\Sinapsis\Documents\Embarcadero\Studio\Projects\File1.cpp</Transaction>
+    <Transaction>2019/10/18 20:14:20.000.197,=C:\Users\Sinapsis\Documents\Embarcadero\Studio\Projects\Project1PCH1.h</Transaction>
+    <Transaction>2019/10/18 20:15:57.000.269,C:\Users\Sinapsis\Documents\Embarcadero\Studio\Projects\File1.cpp=Z:\SINAPgrid\ProjetoEdpDMS\BPR\FL\FL.cpp</Transaction>
+    <Transaction>2019/10/18 20:16:02.000.026,C:\Users\Sinapsis\Documents\Embarcadero\Studio\Projects\Project1PCH1.h=Z:\SINAPgrid\ProjetoEdpDMS\BPR\FL\FLPCH1.h</Transaction>
+    <Transaction>2019/10/18 20:16:06.000.562,C:\Users\Sinapsis\Documents\Embarcadero\Studio\Projects\Project1.cbproj=Z:\SINAPgrid\ProjetoEdpDMS\BPR\FL\FL.cbproj</Transaction>
+    <Transaction>2019/10/18 20:16:35.000.373,=Z:\SINAPgrid\ProjetoEdpDMS\DLL_Inc\FL.h</Transaction>
+    <Transaction>2019/10/18 20:18:14.000.924,=Z:\SINAPgrid\ProjetoEdpDMS\BPR\FL\Unit1.cpp</Transaction>
+    <Transaction>2019/10/18 20:18:33.000.903,Z:\SINAPgrid\ProjetoEdpDMS\BPR\FL\Unit1.h=Z:\SINAPgrid\ProjetoEdpDMS\Fontes\FL\TFL.h</Transaction>
+    <Transaction>2019/10/18 20:18:33.000.903,Z:\SINAPgrid\ProjetoEdpDMS\BPR\FL\Unit1.cpp=Z:\SINAPgrid\ProjetoEdpDMS\Fontes\FL\TFL.cpp</Transaction>
+    <Transaction>2019/10/19 09:17:41.000.421,Z:\SINAPgrid\ProjetoEdpDMS\Fontes\FL\TFL.cpp=</Transaction>
+    <Transaction>2019/10/19 09:18:53.000.654,Z:\SINAPgrid\ProjetoEdpDMS\DLL_Inc\FL.h=</Transaction>
+  </Transactions>
+</BorlandProject>

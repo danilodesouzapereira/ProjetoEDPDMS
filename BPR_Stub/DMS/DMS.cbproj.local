@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+	<Transactions>
+    <Transaction>2019/10/18 18:58:17.000.869,=C:\Users\Sinapsis\Documents\Embarcadero\Studio\Projects\File1.cpp</Transaction>
+    <Transaction>2019/10/18 18:58:17.000.857,=C:\Users\Sinapsis\Documents\Embarcadero\Studio\Projects\Project1PCH1.h</Transaction>
+    <Transaction>2019/10/18 18:58:55.000.458,C:\Users\Sinapsis\Documents\Embarcadero\Studio\Projects\File1.cpp=Z:\SINAPgrid\ProjetoEdpDMS\BPR\DMS\DMS.cpp</Transaction>
+    <Transaction>2019/10/18 18:59:02.000.017,C:\Users\Sinapsis\Documents\Embarcadero\Studio\Projects\Project1PCH1.h=Z:\SINAPgrid\ProjetoEdpDMS\BPR\DMS\DMSPCH1.h</Transaction>
+    <Transaction>2019/10/18 18:59:07.000.809,C:\Users\Sinapsis\Documents\Embarcadero\Studio\Projects\Project1.cbproj=Z:\SINAPgrid\ProjetoEdpDMS\BPR\DMS\DMS.cbproj</Transaction>
+    <Transaction>2019/10/18 19:35:30.000.483,=Z:\SINAPgrid\ProjetoEdpDMS\DLL_Inc\DMS.h</Transaction>
+    <Transaction>2019/10/18 19:38:11.000.589,=Z:\SINAPgrid\ProjetoEdpDMS\BPR\DMS\Unit1.cpp</Transaction>
+    <Transaction>2019/10/18 19:38:25.000.672,Z:\SINAPgrid\ProjetoEdpDMS\BPR\DMS\Unit1.cpp=Z:\SINAPgrid\ProjetoEdpDMS\Fontes\DMS\TFormDMS.cpp</Transaction>
+    <Transaction>2019/10/18 19:38:25.000.672,Z:\SINAPgrid\ProjetoEdpDMS\BPR\DMS\Unit1.dfm=Z:\SINAPgrid\ProjetoEdpDMS\Fontes\DMS\TFormDMS.dfm</Transaction>
+    <Transaction>2019/10/18 19:38:25.000.672,Z:\SINAPgrid\ProjetoEdpDMS\BPR\DMS\Unit1.h=Z:\SINAPgrid\ProjetoEdpDMS\Fontes\DMS\TFormDMS.h</Transaction>
+    <Transaction>2019/10/19 08:21:08.000.471,=Z:\SINAPgrid\ProjetoEdpDMS\DLL_Lib\Win32\Release\FL.lib</Transaction>
+    <Transaction>2019/10/19 08:21:08.000.460,=Z:\SINAPgrid\ProjetoEdpDMS\DLL_Lib\Win32\Release\EE.lib</Transaction>
+    <Transaction>2019/10/19 08:21:08.000.483,=Z:\SINAPgrid\ProjetoEdpDMS\DLL_Lib\Win32\Release\TopologiaDMS.lib</Transaction>
+    <Transaction>2019/10/19 08:52:01.000.568,=Z:\SINAPgrid\ProjetoEdpDMS\BPR\DMS\Unit1.cpp</Transaction>
+    <Transaction>2019/10/19 08:52:12.000.448,Z:\SINAPgrid\ProjetoEdpDMS\Fontes\DMS\TDMS.h=Z:\SINAPgrid\ProjetoEdpDMS\BPR\DMS\Unit1.h</Transaction>
+    <Transaction>2019/10/19 08:52:12.000.448,Z:\SINAPgrid\ProjetoEdpDMS\Fontes\DMS\TDMS.cpp=Z:\SINAPgrid\ProjetoEdpDMS\BPR\DMS\Unit1.cpp</Transaction>
+    <Transaction>2019/10/19 08:58:54.000.047,=Z:\SINAPgrid\ProjetoEdpDMS\BPR\DMS\Unit1.cpp</Transaction>
+    <Transaction>2019/10/19 08:59:09.000.098,Z:\SINAPgrid\ProjetoEdpDMS\Fontes\DMS\TSincronizador.h=Z:\SINAPgrid\ProjetoEdpDMS\BPR\DMS\Unit1.h</Transaction>
+    <Transaction>2019/10/19 08:59:09.000.098,Z:\SINAPgrid\ProjetoEdpDMS\Fontes\DMS\TSincronizador.cpp=Z:\SINAPgrid\ProjetoEdpDMS\BPR\DMS\Unit1.cpp</Transaction>
+    <Transaction>2019/10/19 09:17:56.000.812,Z:\SINAPgrid\ProjetoEdpDMS\Fontes\DMS\TFormDMS.cpp=</Transaction>
+    <Transaction>2019/10/19 09:17:59.000.253,Z:\SINAPgrid\ProjetoEdpDMS\Fontes\DMS\TDMS.cpp=</Transaction>
+    <Transaction>2019/10/19 09:18:01.000.124,Z:\SINAPgrid\ProjetoEdpDMS\Fontes\DMS\TSincronizador.cpp=</Transaction>
+    <Transaction>2019/10/19 09:19:04.000.027,Z:\SINAPgrid\ProjetoEdpDMS\DLL_Inc\DMS.h=</Transaction>
+    <Transaction>2019/10/19 09:38:00.278,Z:\SINAPgrid\ProjetoEdpDMS\DLL_Lib\Win32\Release\FL.lib=</Transaction>
+    <Transaction>2019/10/19 09:38:01.370,Z:\SINAPgrid\ProjetoEdpDMS\DLL_Lib\Win32\Release\EE.lib=</Transaction>
+    <Transaction>2019/10/19 09:38:02.592,Z:\SINAPgrid\ProjetoEdpDMS\DLL_Lib\Win32\Release\TopologiaDMS.lib=</Transaction>
+  </Transactions>
+	<ProjectSortOrder AutoSort="0" SortType="0">
+    <File Path="DMS.cpp"/>
+    <File Path="DMSPCH1.h"/>
+  </ProjectSortOrder>
+</BorlandProject>
