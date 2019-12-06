@@ -1,24 +1,18 @@
 //---------------------------------------------------------------------------
 #pragma hdrstop
 //---------------------------------------------------------------------------
-#include <ProjetoEDPDMS\Fontes\TopologiaDMS\TTopologiaDMS.h>
-#include <ProjetoEDPDMS\Fontes\DMS\Modelos.h>
-#include "TFL.h"
+#include "enumeradores.h"
+#include "TMedIntTrafo.h"
 //---------------------------------------------------------------------------
 #pragma package(smart_init)
 //---------------------------------------------------------------------------
-__fastcall TFL::TFL(TTopologiaDMS* topologiaDMS)
+__fastcall TMedIntTrafo::TMedIntTrafo(VTApl* apl, TTrafo* trafo) : TMedInt(apl)
 {
-	this->topologiaDMS = topologiaDMS;
+   this->trafo = trafo;
+	tipoMedInt = eqptomedintTRAFO;
 }
 //---------------------------------------------------------------------------
-__fastcall TFL::~TFL()
+__fastcall TMedIntTrafo::~TMedIntTrafo()
 {
-
-}
-//---------------------------------------------------------------------------
-void __fastcall TFL::IniciarProcesso(EntradaFL* entradaFL)
-{
-	this->entradaFL = entradaFL;
 }
 //---------------------------------------------------------------------------

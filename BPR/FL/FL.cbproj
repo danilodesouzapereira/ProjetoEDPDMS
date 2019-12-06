@@ -107,7 +107,7 @@
         <VerInfo_Locale>1033</VerInfo_Locale>
         <Manifest_File>(None)</Manifest_File>
         <FinalOutputDir>$(SINAP_BIN)\$(Platform)\$(Config)</FinalOutputDir>
-        <IncludePath>$(PROJETOS)\;$(ProjetoEDPSimplex)\..\;$(PROJETOS)\..\;$(ProjetoEDPDMS)\..\;$(ProjetoEDPDMS)\;..\..\..\Rev4.0_XE\ProjetoEdp\Fontes\SinapToolKit\Socorro\;..\..\..\Rev4.0_XE\ProjetoEdp\Fontes\SinapToolKit\Forms\;..\..\..\Rev4.0_XE\ProjetoEdp\BPR\SinapToolKit\;..\..\Fontes\SinapToolKit\Socorro\;..\..\Fontes\SinapToolKit\Forms\;..\..\Fontes\SinapToolKit\;$(PROJETOS);$(SINAP);..\..\Fontes\DMS\;..\..\Fontes\EE\;$(IncludePath)</IncludePath>
+        <IncludePath>$(PROJETOS)\;$(ProjetoEDPSimplex)\..\;$(PROJETOS)\..\;$(ProjetoEDPDMS)\..\;$(ProjetoEDPDMS)\;..\..\..\Rev4.0_XE\ProjetoEdp\Fontes\SinapToolKit\Socorro\;..\..\..\Rev4.0_XE\ProjetoEdp\Fontes\SinapToolKit\Forms\;..\..\..\Rev4.0_XE\ProjetoEdp\BPR\SinapToolKit\;..\..\Fontes\SinapToolKit\Socorro\;..\..\Fontes\SinapToolKit\Forms\;..\..\Fontes\SinapToolKit\;$(PROJETOS);$(SINAP);..\..\Fontes\EE\;$(IncludePath)</IncludePath>
         <IntermediateOutputDir>$(PROJETOS)\ProjetoEdpDMS\tmp\$(Platform)\$(Config)</IntermediateOutputDir>
     </PropertyGroup>
     <PropertyGroup Condition="'$(Cfg_2)'!=''">
@@ -120,7 +120,7 @@
         <VerInfo_Locale>1033</VerInfo_Locale>
         <Manifest_File>(None)</Manifest_File>
         <FinalOutputDir>$(SINAP_BIN)\$(Platform)\$(Config)</FinalOutputDir>
-        <IncludePath>$(PROJETOS)\;$(ProjetoEDPSimplex)\..\;$(PROJETOS)\..\;$(ProjetoEDPDMS)\..\;$(ProjetoEDPDMS)\;..\..\..\Rev4.0_XE\ProjetoEdp\Fontes\SinapToolKit\Socorro\;..\..\..\Rev4.0_XE\ProjetoEdp\Fontes\SinapToolKit\Forms\;..\..\..\Rev4.0_XE\ProjetoEdp\BPR\SinapToolKit\;..\..\Fontes\SinapToolKit\Socorro\;..\..\Fontes\SinapToolKit\Forms\;..\..\Fontes\SinapToolKit\;$(PROJETOS);$(SINAP);..\..\Fontes\DMS\;..\..\Fontes\EE\;$(IncludePath)</IncludePath>
+        <IncludePath>$(PROJETOS)\;$(ProjetoEDPSimplex)\..\;$(PROJETOS)\..\;$(ProjetoEDPDMS)\..\;$(ProjetoEDPDMS)\;..\..\..\Rev4.0_XE\ProjetoEdp\Fontes\SinapToolKit\Socorro\;..\..\..\Rev4.0_XE\ProjetoEdp\Fontes\SinapToolKit\Forms\;..\..\..\Rev4.0_XE\ProjetoEdp\BPR\SinapToolKit\;..\..\Fontes\SinapToolKit\Socorro\;..\..\Fontes\SinapToolKit\Forms\;..\..\Fontes\SinapToolKit\;$(PROJETOS);$(SINAP);..\..\Fontes\EE\;$(IncludePath)</IncludePath>
         <IntermediateOutputDir>$(PROJETOS)\ProjetoEdpDMS\tmp\$(Platform)\$(Config)</IntermediateOutputDir>
         <LinkPackageImports>rtl.bpi;vcl.bpi</LinkPackageImports>
     </PropertyGroup>

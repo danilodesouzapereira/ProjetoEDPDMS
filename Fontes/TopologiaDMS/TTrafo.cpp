@@ -1,24 +1,18 @@
 //---------------------------------------------------------------------------
 #pragma hdrstop
 //---------------------------------------------------------------------------
-#include <ProjetoEDPDMS\Fontes\TopologiaDMS\TTopologiaDMS.h>
-#include <ProjetoEDPDMS\Fontes\DMS\Modelos.h>
-#include "TFL.h"
+#include "enumeradores.h"
+#include "TTrafo.h"
 //---------------------------------------------------------------------------
 #pragma package(smart_init)
 //---------------------------------------------------------------------------
-__fastcall TFL::TFL(TTopologiaDMS* topologiaDMS)
+__fastcall TTrafo::TTrafo(VTApl* apl, VTCarga* carga) : TEqptoTopologia(apl)
 {
-	this->topologiaDMS = topologiaDMS;
+   this->carga = carga;
 }
 //---------------------------------------------------------------------------
-__fastcall TFL::~TFL()
+__fastcall TTrafo::~TTrafo()
 {
 
-}
-//---------------------------------------------------------------------------
-void __fastcall TFL::IniciarProcesso(EntradaFL* entradaFL)
-{
-	this->entradaFL = entradaFL;
 }
 //---------------------------------------------------------------------------

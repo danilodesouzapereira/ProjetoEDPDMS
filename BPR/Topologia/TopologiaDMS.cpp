@@ -1,8 +1,9 @@
+
 #include <vcl.h>
 #include <windows.h>
 //---------------------------------------------------------------------------
-#include <ProjetoEDPDMS\DLL_Inc\FL.h>
-#include <ProjetoEDPDMS\Fontes\FL\TFL.h>
+#include <ProjetoEDPDMS\DLL_Inc\TopologiaDMS.h>
+#include <PlataformaSinap\Fontes\Apl\VTApl.h>
 #include <ProjetoEDPDMS\Fontes\TopologiaDMS\TTopologiaDMS.h>
 //---------------------------------------------------------------------------
 #pragma hdrstop
@@ -13,14 +14,14 @@ int WINAPI DllEntryPoint(HINSTANCE hinst, unsigned long reason, void* lpReserved
 	return 1;
 }
 //---------------------------------------------------------------------------
-EXPORT TFL* __fastcall DLL_NewFL(TTopologiaDMS* topologiaDMS)
+EXPORT TTopologiaDMS* __fastcall DLL_NewTopologiaDMS(VTApl *apl_owner, VTRede* rede)
 {
-	TFL* localizador = new TFL(topologiaDMS);
-   return(localizador);
+	TTopologiaDMS* topologiaDMS = new TTopologiaDMS(apl_owner, rede);
+	return(topologiaDMS);
 }
 //---------------------------------------------------------------------------
-EXPORT void __fastcall DLL_DeleteFL(TFL* localizador)
+EXPORT void __fastcall DLL_DeleteTopologiaDMS(TTopologiaDMS* topologiaDMS)
 {
-   delete localizador;
+	delete topologiaDMS;
 }
 //---------------------------------------------------------------------------

@@ -1,24 +1,18 @@
 //---------------------------------------------------------------------------
 #pragma hdrstop
 //---------------------------------------------------------------------------
-#include <ProjetoEDPDMS\Fontes\TopologiaDMS\TTopologiaDMS.h>
-#include <ProjetoEDPDMS\Fontes\DMS\Modelos.h>
-#include "TFL.h"
+#include "enumeradores.h"
+#include "TReleReligadora.h"
 //---------------------------------------------------------------------------
 #pragma package(smart_init)
 //---------------------------------------------------------------------------
-__fastcall TFL::TFL(TTopologiaDMS* topologiaDMS)
+__fastcall TReleReligadora::TReleReligadora(VTApl* apl, TReligadora* religadora) : TRele(apl)
 {
-	this->topologiaDMS = topologiaDMS;
+   this->religadora = religadora;
+	tipoEqptoDadoRele = eqptodadoreleRELIGADORA;
 }
 //---------------------------------------------------------------------------
-__fastcall TFL::~TFL()
+__fastcall TReleReligadora::~TReleReligadora()
 {
-
-}
-//---------------------------------------------------------------------------
-void __fastcall TFL::IniciarProcesso(EntradaFL* entradaFL)
-{
-	this->entradaFL = entradaFL;
 }
 //---------------------------------------------------------------------------

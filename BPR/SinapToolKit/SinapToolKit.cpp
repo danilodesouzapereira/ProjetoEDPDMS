@@ -5,8 +5,8 @@
 #include <PlataformaSinap\Fontes\Licenca\VTEmpresa.h>
 #include <PlataformaSinap\DLL_Inc\Funcao.h>
 #include <PlataformaSinap\DLL_Inc\SinapToolKit.h>
-#include <ProjetoNeoenergia\Fontes\SinapToolKit\Forms\TFormStkChild.h>
-#include <ProjetoNeoenergia\Fontes\SinapToolKit\Forms\TFormStkMdi.h>
+#include <ProjetoEDPDMS\Fontes\SinapToolKit\Forms\TFormStkChild.h>
+#include <ProjetoEDPDMS\Fontes\SinapToolKit\Forms\TFormStkMdi.h>
 #pragma argsused
 //---------------------------------------------------------------------------
 int WINAPI DllEntryPoint(HINSTANCE hinst, unsigned long reason, void* lpReserved)

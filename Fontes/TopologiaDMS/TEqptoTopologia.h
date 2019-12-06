@@ -1,28 +1,26 @@
 //---------------------------------------------------------------------------
-#ifndef TFLH
-#define TFLH
+#ifndef TEqptoTopologiaH
+#define TEqptoTopologiaH
 //---------------------------------------------------------------------------
 #include <System.Classes.hpp>
 #include <Vcl.Controls.hpp>
 #include <Vcl.StdCtrls.hpp>
 #include <Vcl.ComCtrls.hpp>
 //---------------------------------------------------------------------------
-class TTopologiaDMS;
+class VTApl;
 //---------------------------------------------------------------------------
-struct EntradaFL;
-//---------------------------------------------------------------------------
-class TFL : public TObject
+class TEqptoTopologia : public TObject
 {
 public:
+	// Parâmetros elementares
+	VTApl* apl;
+	int    tipo;
+
+
 	// Métodos
-		  __fastcall TFL(TTopologiaDMS* topologiaDMS);
-		  __fastcall ~TFL();
-	void __fastcall IniciarProcesso(EntradaFL* entradaFL);
+	__fastcall TEqptoTopologia(VTApl* apl);
+	__fastcall ~TEqptoTopologia();
 
-
-	// Parãmetros
-	EntradaFL*     entradaFL;
-	TTopologiaDMS* topologiaDMS;
 };
 //---------------------------------------------------------------------------
 #endif

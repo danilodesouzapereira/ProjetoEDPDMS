@@ -1,28 +1,30 @@
 //---------------------------------------------------------------------------
-#ifndef TFLH
-#define TFLH
+#ifndef TTestesH
+#define TTestesH
 //---------------------------------------------------------------------------
 #include <System.Classes.hpp>
 #include <Vcl.Controls.hpp>
 #include <Vcl.StdCtrls.hpp>
 #include <Vcl.ComCtrls.hpp>
 //---------------------------------------------------------------------------
-class TTopologiaDMS;
+class VTApl;
+class VTGrafico;
+class VTRedes;
 //---------------------------------------------------------------------------
-struct EntradaFL;
-//---------------------------------------------------------------------------
-class TFL : public TObject
+class TTestes
 {
 public:
+	// Parâmetros elementares
+	VTApl* apl;
+	VTGrafico* grafico;
+	VTRedes* redes;
+
 	// Métodos
-		  __fastcall TFL(TTopologiaDMS* topologiaDMS);
-		  __fastcall ~TFL();
-	void __fastcall IniciarProcesso(EntradaFL* entradaFL);
+				__fastcall TTestes(VTApl* apl);
+				__fastcall ~TTestes();
 
+	void __fastcall MostrarLigacoes(String pathArquivoLigacoes);
 
-	// Parãmetros
-	EntradaFL*     entradaFL;
-	TTopologiaDMS* topologiaDMS;
 };
 //---------------------------------------------------------------------------
 #endif

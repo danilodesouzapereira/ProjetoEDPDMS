@@ -1,24 +1,19 @@
 //---------------------------------------------------------------------------
 #pragma hdrstop
 //---------------------------------------------------------------------------
-#include <ProjetoEDPDMS\Fontes\TopologiaDMS\TTopologiaDMS.h>
-#include <ProjetoEDPDMS\Fontes\DMS\Modelos.h>
-#include "TFL.h"
+#include "enumeradores.h"
+#include "TEqptoAutomacao.h"
+#include <PlataformaSinap\Fontes\Apl\VTApl.h>
 //---------------------------------------------------------------------------
 #pragma package(smart_init)
 //---------------------------------------------------------------------------
-__fastcall TFL::TFL(TTopologiaDMS* topologiaDMS)
+__fastcall TEqptoAutomacao::TEqptoAutomacao(VTApl* apl) : TEqptoTopologia(apl)
 {
-	this->topologiaDMS = topologiaDMS;
+	tipo = topoAUTOMACAO;
 }
 //---------------------------------------------------------------------------
-__fastcall TFL::~TFL()
+__fastcall TEqptoAutomacao::~TEqptoAutomacao()
 {
 
-}
-//---------------------------------------------------------------------------
-void __fastcall TFL::IniciarProcesso(EntradaFL* entradaFL)
-{
-	this->entradaFL = entradaFL;
 }
 //---------------------------------------------------------------------------

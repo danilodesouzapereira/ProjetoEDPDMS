@@ -1,28 +1,25 @@
 //---------------------------------------------------------------------------
-#ifndef TFLH
-#define TFLH
+#ifndef TReleDisjuntorH
+#define TReleDisjuntorH
 //---------------------------------------------------------------------------
 #include <System.Classes.hpp>
 #include <Vcl.Controls.hpp>
 #include <Vcl.StdCtrls.hpp>
 #include <Vcl.ComCtrls.hpp>
 //---------------------------------------------------------------------------
-class TTopologiaDMS;
+#include "TRele.h"
 //---------------------------------------------------------------------------
-struct EntradaFL;
+class TDisjuntor;
 //---------------------------------------------------------------------------
-class TFL : public TObject
+class TReleDisjuntor : public TRele
 {
 public:
+	// Parâmetros elementares
+	TDisjuntor* disjuntor;
+
 	// Métodos
-		  __fastcall TFL(TTopologiaDMS* topologiaDMS);
-		  __fastcall ~TFL();
-	void __fastcall IniciarProcesso(EntradaFL* entradaFL);
-
-
-	// Parãmetros
-	EntradaFL*     entradaFL;
-	TTopologiaDMS* topologiaDMS;
+	__fastcall TReleDisjuntor(VTApl* apl, TDisjuntor* disjuntor);
+	__fastcall ~TReleDisjuntor();
 };
 //---------------------------------------------------------------------------
 #endif

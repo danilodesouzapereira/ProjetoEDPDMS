@@ -6,7 +6,7 @@
         <Projects Include="..\BPR\DMSCOM\DMSCOM.cbproj">
             <Dependencies/>
         </Projects>
-        <Projects Include="..\BPR\TopologiaDMS\TopologiaDMS.cbproj">
+        <Projects Include="..\BPR\Topologia\TopologiaDMS.cbproj">
             <Dependencies/>
         </Projects>
         <Projects Include="..\BPR\FL\FL.cbproj">
@@ -39,13 +39,13 @@
         <MSBuild Projects="..\BPR\DMSCOM\DMSCOM.cbproj" Targets="Make"/>
     </Target>
     <Target Name="TopologiaDMS">
-        <MSBuild Projects="..\BPR\TopologiaDMS\TopologiaDMS.cbproj"/>
+        <MSBuild Projects="..\BPR\Topologia\TopologiaDMS.cbproj"/>
     </Target>
     <Target Name="TopologiaDMS:Clean">
-        <MSBuild Projects="..\BPR\TopologiaDMS\TopologiaDMS.cbproj" Targets="Clean"/>
+        <MSBuild Projects="..\BPR\Topologia\TopologiaDMS.cbproj" Targets="Clean"/>
     </Target>
     <Target Name="TopologiaDMS:Make">
-        <MSBuild Projects="..\BPR\TopologiaDMS\TopologiaDMS.cbproj" Targets="Make"/>
+        <MSBuild Projects="..\BPR\Topologia\TopologiaDMS.cbproj" Targets="Make"/>
     </Target>
     <Target Name="FL">
         <MSBuild Projects="..\BPR\FL\FL.cbproj"/>

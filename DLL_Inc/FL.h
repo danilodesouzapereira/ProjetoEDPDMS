@@ -8,7 +8,7 @@
 class TFL;
 class TTopologiaDMS;
 //-----------------------------------------------------------------------------
-EXPORT TFL* __fastcall DLL_NewFL(TTopologiaDMS* topoDMS);
+EXPORT TFL* __fastcall DLL_NewFL(TTopologiaDMS* topologiaDMS);
 EXPORT void __fastcall DLL_DeleteFL(TFL* localizador);
 //---------------------------------------------------------------------------
 #endif

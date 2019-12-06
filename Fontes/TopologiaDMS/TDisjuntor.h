@@ -1,28 +1,25 @@
 //---------------------------------------------------------------------------
-#ifndef TFLH
-#define TFLH
+#ifndef TDisjuntorH
+#define TDisjuntorH
 //---------------------------------------------------------------------------
 #include <System.Classes.hpp>
 #include <Vcl.Controls.hpp>
 #include <Vcl.StdCtrls.hpp>
 #include <Vcl.ComCtrls.hpp>
 //---------------------------------------------------------------------------
-class TTopologiaDMS;
+#include "TEqptoAutomacao.h"
 //---------------------------------------------------------------------------
-struct EntradaFL;
+class VTChave;
 //---------------------------------------------------------------------------
-class TFL : public TObject
+class TDisjuntor : public TEqptoAutomacao
 {
 public:
+	// Parâmetros
+	VTChave* chave;
+
 	// Métodos
-		  __fastcall TFL(TTopologiaDMS* topologiaDMS);
-		  __fastcall ~TFL();
-	void __fastcall IniciarProcesso(EntradaFL* entradaFL);
-
-
-	// Parãmetros
-	EntradaFL*     entradaFL;
-	TTopologiaDMS* topologiaDMS;
+	__fastcall TDisjuntor(VTApl* apl, VTChave* chave);
+	__fastcall ~TDisjuntor();
 };
 //---------------------------------------------------------------------------
 #endif

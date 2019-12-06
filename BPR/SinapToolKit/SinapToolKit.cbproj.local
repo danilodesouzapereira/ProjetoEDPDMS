@@ -28,19 +28,19 @@
     <File Path="..\..\Fontes\SinapToolKit\Socorro\TConecta.cpp"/>
     <File Path="..\..\Fontes\SinapToolKit\Socorro\TConecta.cpp"/>
     <File Path="..\..\Fontes\SinapToolKit\Socorro\TConecta.h"/>
-    <File Path="..\..\..\ModulosOpcionais\DLL_Lib\Win32\Release\AlocaChaves.lib"/>
-    <File Path="..\..\..\PlataformaSinap\DLL_Lib\Win32\Release\CalcIndCont.lib"/>
-    <File Path="..\..\DLL_Lib\Win32\Release\DMS.lib"/>
-    <File Path="..\..\..\ModulosOpcionais\DLL_Lib\Win32\Release\ExtratorOcorrencias.lib"/>
-    <File Path="..\..\..\PlataformaSinap\DLL_Lib\Win32\Release\Funcao.lib"/>
-    <File Path="..\..\..\PlataformaSinap\DLL_Lib\Win32\Release\Gateway.lib"/>
-    <File Path="..\..\..\ModulosOpcionais\DLL_Lib\Win32\Release\GeralMainFormAlocaChavesP1.lib"/>
     <File Path="..\..\..\SINAPgrid\ModulosOpcionais\DLL_LIB\Win32\Release\GeralMainFormAlocaChavesP1.lib"/>
-    <File Path="..\..\..\SINAPgrid\ModulosOpcionais\DLL_LIB\Win32\Release\ImportaRedeAccess.lib"/>
-    <File Path="..\..\..\SINAPgrid\PlataformaSinap\DLL_Lib\Win32\Release\ImportaRedeGIS.lib"/>
-    <File Path="..\..\DLL_Lib\Win32\Release\ImportaRedeGIS.lib"/>
-    <File Path="..\..\..\SINAPgrid\PlataformaSinap\DLL_Lib\Win32\Release\Simulador.lib"/>
-    <File Path="SinapToolKit.cpp"/>
     <File Path="..\..\..\SINAPgrid\PlataformaSinap\DLL_Lib\Win32\Release\Stk.lib"/>
+    <File Path="..\..\..\SINAPgrid\PlataformaSinap\DLL_Lib\Win32\Release\Simulador.lib"/>
+    <File Path="..\..\..\SINAPgrid\PlataformaSinap\DLL_Lib\Win32\Release\ImportaRedeGIS.lib"/>
+    <File Path="..\..\..\SINAPgrid\ModulosOpcionais\DLL_LIB\Win32\Release\ImportaRedeAccess.lib"/>
+    <File Path="..\..\..\PlataformaSinap\DLL_Lib\Win32\Release\CalcIndCont.lib"/>
+    <File Path="..\..\..\ModulosOpcionais\DLL_Lib\Win32\Release\GeralMainFormAlocaChavesP1.lib"/>
+    <File Path="..\..\..\ModulosOpcionais\DLL_Lib\Win32\Release\ExtratorOcorrencias.lib"/>
+    <File Path="..\..\..\ModulosOpcionais\DLL_Lib\Win32\Release\AlocaChaves.lib"/>
+    <File Path="..\..\..\PlataformaSinap\DLL_Lib\Win32\Release\Funcao.lib"/>
+    <File Path="..\..\DLL_Lib\Win32\Release\ImportaRedeGIS.lib"/>
+    <File Path="..\..\DLL_Lib\Win32\Release\DMS.lib"/>
+    <File Path="SinapToolKit.cpp"/>
+    <File Path="..\..\..\PlataformaSinap\DLL_Lib\Win32\Release\Gateway.lib"/>
   </ProjectSortOrder>
 </BorlandProject>

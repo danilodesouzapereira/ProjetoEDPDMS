@@ -7,34 +7,37 @@
 #include <Vcl.StdCtrls.hpp>
 #include <Vcl.ComCtrls.hpp>
 //---------------------------------------------------------------------------
+class TDisjuntor;
 class VTApl;
 class VTBloco;
-class VTBlocos;
 class VTChave;
-class VTOrdena;
+class VTLigacao;
 class VTRede;
-class VTRedes;
 //---------------------------------------------------------------------------
 class TTopologiaDMS : public TObject
 {
 public:
-	// Parãmetros
-	TList*    lisBlocosDMS;
-	VTApl*    apl;
-	VTBlocos* blocos;
-   VTOrdena* ordena;
-	VTRedes*  redes;
+	// Parâmetros elementares
+	VTApl* apl;
+	VTRede* rede;
 
+	TList* lisBlocoRad;
+	TDisjuntor* disjuntor;
+	TList* lisReligadoras;
 
 	// Métodos
-		  __fastcall TTopologiaDMS(VTApl* apl);
-		  __fastcall ~TTopologiaDMS();
+				__fastcall TTopologiaDMS(VTApl* apl, VTRede* rede);
+				__fastcall ~TTopologiaDMS();
 
 	VTChave* __fastcall ChaveBloco(VTBloco* bloco);
-	void     __fastcall DeterminaBlocosDMS(VTRede* rede);
-	void     __fastcall IniciaTopologiaRede(VTRede* rede);
-	void     __fastcall OrdenaBlocosDMS();
+	void     __fastcall DestroiEqptosTopologia();
+	void     __fastcall DeterminaBlocosRadiais();
+	void     __fastcall IniciaTopologiaRede();
+	void     __fastcall OrdenaBlocosRadiais();
 
+	// Métodos de busca
+	void     __fastcall BUSCA_BlocosRadJusanteLigacao(String codigoLigacao, TList* lisEXT);
+	void     __fastcall BUSCA_BlocosRadJusanteLigacao(VTLigacao* ligacao, TList* lisEXT);
 };
 //---------------------------------------------------------------------------
 #endif

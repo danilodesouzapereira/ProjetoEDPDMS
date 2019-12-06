@@ -1,28 +1,25 @@
 //---------------------------------------------------------------------------
-#ifndef TFLH
-#define TFLH
+#ifndef TReligadoraH
+#define TReligadoraH
 //---------------------------------------------------------------------------
 #include <System.Classes.hpp>
 #include <Vcl.Controls.hpp>
 #include <Vcl.StdCtrls.hpp>
 #include <Vcl.ComCtrls.hpp>
 //---------------------------------------------------------------------------
-class TTopologiaDMS;
+#include "TEqptoAutomacao.h"
 //---------------------------------------------------------------------------
-struct EntradaFL;
+class VTChave;
 //---------------------------------------------------------------------------
-class TFL : public TObject
+class TReligadora : public TEqptoAutomacao
 {
 public:
+	// Parâmetros
+	VTChave* chave;
+
 	// Métodos
-		  __fastcall TFL(TTopologiaDMS* topologiaDMS);
-		  __fastcall ~TFL();
-	void __fastcall IniciarProcesso(EntradaFL* entradaFL);
-
-
-	// Parãmetros
-	EntradaFL*     entradaFL;
-	TTopologiaDMS* topologiaDMS;
+	__fastcall TReligadora(VTApl* apl, VTChave* chave);
+	__fastcall ~TReligadora();
 };
 //---------------------------------------------------------------------------
 #endif

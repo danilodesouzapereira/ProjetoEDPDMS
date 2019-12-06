@@ -3,6 +3,9 @@
 //---------------------------------------------------------------------------
 #include <PlataformaSinap\Fontes\Apl\VTApl.h>
 #include <PlataformaSinap\Fontes\Diretorio\VTPath.h>
+#include <PlataformaSinap\Fontes\Rede\VTRede.h>
+#include <PlataformaSinap\Fontes\Rede\VTRedes.h>
+#include <PlataformaSinap\Fontes\Rede\VTTipoRede.h>
 //---------------------------------------------------------------------------
 #include <ProjetoEDPDMS\DLL_Inc\EE.h>
 #include <ProjetoEDPDMS\DLL_Inc\FL.h>
@@ -22,7 +25,17 @@ __fastcall TDMS::TDMS(VTApl* apl)
 	path = (VTPath*) apl->GetObject(__classid(VTPath));
 
 	// Cria objetos principais da solução de DMS
-	topologia = DLL_NewTopologiaDMS(apl);
+	VTRedes* redes = (VTRedes*) apl->GetObject(__classid(VTRedes));
+	VTRede* rede = NULL;
+	for(int i=0; i<redes->LisRede()->Count; i++)
+	{
+		rede = (VTRede*) redes->LisRede()->Items[i];
+		if(!rede->Carregada || rede->TipoRede->Segmento != redePRI) continue;
+		break;
+   }
+	topologia = DLL_NewTopologiaDMS(apl, rede);
+
+
 	estimador = DLL_NewEE(apl);
 	localizador = DLL_NewFL(topologia);
 

@@ -1,28 +1,25 @@
 //---------------------------------------------------------------------------
-#ifndef TFLH
-#define TFLH
+#ifndef TReleReligadoraH
+#define TReleReligadoraH
 //---------------------------------------------------------------------------
 #include <System.Classes.hpp>
 #include <Vcl.Controls.hpp>
 #include <Vcl.StdCtrls.hpp>
 #include <Vcl.ComCtrls.hpp>
 //---------------------------------------------------------------------------
-class TTopologiaDMS;
+#include "TRele.h"
 //---------------------------------------------------------------------------
-struct EntradaFL;
+class TReligadora;
 //---------------------------------------------------------------------------
-class TFL : public TObject
+class TReleReligadora : public TRele
 {
 public:
+	// Parâmetros elementares
+	TReligadora* religadora;
+
 	// Métodos
-		  __fastcall TFL(TTopologiaDMS* topologiaDMS);
-		  __fastcall ~TFL();
-	void __fastcall IniciarProcesso(EntradaFL* entradaFL);
-
-
-	// Parãmetros
-	EntradaFL*     entradaFL;
-	TTopologiaDMS* topologiaDMS;
+	__fastcall TReleReligadora(VTApl* apl, TReligadora* religadora);
+	__fastcall ~TReleReligadora();
 };
 //---------------------------------------------------------------------------
 #endif

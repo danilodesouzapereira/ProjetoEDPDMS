@@ -7,8 +7,9 @@
 //-----------------------------------------------------------------------------
 class TTopologiaDMS;
 class VTApl;
+class VTRede;
 //-----------------------------------------------------------------------------
-EXPORT TTopologiaDMS* __fastcall DLL_NewTopologiaDMS(VTApl *apl_owner);
+EXPORT TTopologiaDMS* __fastcall DLL_NewTopologiaDMS(VTApl *apl_owner, VTRede* rede);
 EXPORT void __fastcall DLL_DeleteTopologiaDMS(TTopologiaDMS* topologiaDMS);
 //---------------------------------------------------------------------------
 #endif

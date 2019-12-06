@@ -1,24 +1,27 @@
 //---------------------------------------------------------------------------
 #pragma hdrstop
 //---------------------------------------------------------------------------
-#include <ProjetoEDPDMS\Fontes\TopologiaDMS\TTopologiaDMS.h>
-#include <ProjetoEDPDMS\Fontes\DMS\Modelos.h>
-#include "TFL.h"
+#include "enumeradores.h"
+#include "TBlocoRad.h"
+#include "TEqptoTopologia.h"
+#include <PlataformaSinap\Fontes\Apl\VTApl.h>
+#include <PlataformaSinap\Fontes\Bloco\VTBloco.h>
+#include <PlataformaSinap\Fontes\Rede\VTChave.h>
 //---------------------------------------------------------------------------
 #pragma package(smart_init)
 //---------------------------------------------------------------------------
-__fastcall TFL::TFL(TTopologiaDMS* topologiaDMS)
+__fastcall TBlocoRad::TBlocoRad(VTApl* apl) : TEqptoTopologia(apl)
 {
-	this->topologiaDMS = topologiaDMS;
+	tipo = topoBLOCORAD;
+	chavePai = NULL;
+	bloco = NULL;
+	blocoRadPai = NULL;
+	lisBlocoRadFilho = new TList;
 }
 //---------------------------------------------------------------------------
-__fastcall TFL::~TFL()
+__fastcall TBlocoRad::~TBlocoRad()
 {
-
-}
-//---------------------------------------------------------------------------
-void __fastcall TFL::IniciarProcesso(EntradaFL* entradaFL)
-{
-	this->entradaFL = entradaFL;
+	// Destroi objetos
+   delete lisBlocoRadFilho;
 }
 //---------------------------------------------------------------------------

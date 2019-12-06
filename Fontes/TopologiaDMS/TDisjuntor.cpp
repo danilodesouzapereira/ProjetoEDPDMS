@@ -1,24 +1,20 @@
 //---------------------------------------------------------------------------
 #pragma hdrstop
 //---------------------------------------------------------------------------
-#include <ProjetoEDPDMS\Fontes\TopologiaDMS\TTopologiaDMS.h>
-#include <ProjetoEDPDMS\Fontes\DMS\Modelos.h>
-#include "TFL.h"
+#include "enumeradores.h"
+#include "TDisjuntor.h"
+#include "TEqptoAutomacao.h"
 //---------------------------------------------------------------------------
 #pragma package(smart_init)
 //---------------------------------------------------------------------------
-__fastcall TFL::TFL(TTopologiaDMS* topologiaDMS)
+__fastcall TDisjuntor::TDisjuntor(VTApl* apl, VTChave* chave) : TEqptoAutomacao(apl)
 {
-	this->topologiaDMS = topologiaDMS;
+	tipoAutomacao = automacaoDISJUNTOR;
+	this->chave = chave;
 }
 //---------------------------------------------------------------------------
-__fastcall TFL::~TFL()
+__fastcall TDisjuntor::~TDisjuntor()
 {
 
-}
-//---------------------------------------------------------------------------
-void __fastcall TFL::IniciarProcesso(EntradaFL* entradaFL)
-{
-	this->entradaFL = entradaFL;
 }
 //---------------------------------------------------------------------------

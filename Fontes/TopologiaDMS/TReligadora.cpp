@@ -1,24 +1,20 @@
 //---------------------------------------------------------------------------
 #pragma hdrstop
 //---------------------------------------------------------------------------
-#include <ProjetoEDPDMS\Fontes\TopologiaDMS\TTopologiaDMS.h>
-#include <ProjetoEDPDMS\Fontes\DMS\Modelos.h>
-#include "TFL.h"
+#include "enumeradores.h"
+#include "TReligadora.h"
+#include "TEqptoAutomacao.h"
 //---------------------------------------------------------------------------
 #pragma package(smart_init)
 //---------------------------------------------------------------------------
-__fastcall TFL::TFL(TTopologiaDMS* topologiaDMS)
+__fastcall TReligadora::TReligadora(VTApl* apl, VTChave* chave) : TEqptoAutomacao(apl)
 {
-	this->topologiaDMS = topologiaDMS;
+   this->chave = chave;
+	tipoAutomacao = automacaoRELIGADORA;
 }
 //---------------------------------------------------------------------------
-__fastcall TFL::~TFL()
+__fastcall TReligadora::~TReligadora()
 {
 
-}
-//---------------------------------------------------------------------------
-void __fastcall TFL::IniciarProcesso(EntradaFL* entradaFL)
-{
-	this->entradaFL = entradaFL;
 }
 //---------------------------------------------------------------------------
