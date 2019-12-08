@@ -5,11 +5,10 @@
 #include <Classes.hpp>
 #define EXPORT extern "C++" __declspec(dllexport)
 //-----------------------------------------------------------------------------
-class TEE;
+class VTEE;
 class VTApl;
 //-----------------------------------------------------------------------------
-EXPORT TEE* __fastcall DLL_NewEE(VTApl *apl_owner);
-EXPORT void __fastcall DLL_DeleteEE(TEE* estimador);
+EXPORT VTEE* __fastcall DLL_NewEE(VTApl *apl_owner);
 //---------------------------------------------------------------------------
 #endif
 //eof

@@ -1,34 +1,35 @@
+
 //---------------------------------------------------------------------------
-#ifndef TFLH
-#define TFLH
+#ifndef VTFLH
+#define VTFLH
 //---------------------------------------------------------------------------
 #include <System.Classes.hpp>
 #include <Vcl.Controls.hpp>
 #include <Vcl.StdCtrls.hpp>
 #include <Vcl.ComCtrls.hpp>
 //---------------------------------------------------------------------------
-#include "VTFL.h"
-//---------------------------------------------------------------------------
-class VTTopologiaDMS;
+class TTopologiaDMS;
 class VTApl;
 //---------------------------------------------------------------------------
 struct EntradaFL;
 //---------------------------------------------------------------------------
-class TFL : public VTFL
+class VTFL : public TObject
 {
 public:
 	// Métodos
-		  __fastcall TFL(VTApl* apl);
-		  __fastcall ~TFL(void);
+		  __fastcall  VTFL(void) {};
+		  __fastcall ~VTFL(void) {};
 
-	void __fastcall CriaObjTopologia();
-	void __fastcall IniciaObjTopologia();
-	void __fastcall ExecutaProcesso(EntradaFL* entradaFL);
+	virtual void __fastcall CriaObjTopologia() = 0;
+	virtual void __fastcall IniciaObjTopologia() = 0;
+	virtual void __fastcall ExecutaProcesso(EntradaFL* entradaFL) = 0;
 
 	// Parãmetros
 	EntradaFL*     entradaFL;
-	VTTopologiaDMS* topologiaDMS;
+	TTopologiaDMS* topologiaDMS;
    VTApl*         apl;
 };
+//---------------------------------------------------------------------------
+VTFL* __fastcall NewObjFL(VTApl *apl);
 //---------------------------------------------------------------------------
 #endif

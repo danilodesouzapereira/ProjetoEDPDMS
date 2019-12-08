@@ -5,12 +5,11 @@
 #include <Classes.hpp>
 #define EXPORT extern "C++" __declspec(dllexport)
 //-----------------------------------------------------------------------------
-class TTopologiaDMS;
+class VTTopologiaDMS;
 class VTApl;
 class VTRede;
 //-----------------------------------------------------------------------------
-EXPORT TTopologiaDMS* __fastcall DLL_NewTopologiaDMS(VTApl *apl_owner, VTRede* rede);
-EXPORT void __fastcall DLL_DeleteTopologiaDMS(TTopologiaDMS* topologiaDMS);
+EXPORT VTTopologiaDMS* __fastcall DLL_NewTopologiaDMS(VTApl *apl_owner, String codigoRede);
 //---------------------------------------------------------------------------
 #endif
 //eof

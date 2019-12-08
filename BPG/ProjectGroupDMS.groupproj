@@ -12,10 +12,10 @@
         <Projects Include="..\BPR\FL\FL.cbproj">
             <Dependencies/>
         </Projects>
-        <Projects Include="..\BPR\DMS\DMS.cbproj">
+        <Projects Include="..\BPR\EE\EE.cbproj">
             <Dependencies/>
         </Projects>
-        <Projects Include="..\BPR\EE\EE.cbproj">
+        <Projects Include="..\BPR\DMS\DMS.cbproj">
             <Dependencies/>
         </Projects>
         <Projects Include="..\BPR\SinapToolKit\SinapToolKit.cbproj">
@@ -56,15 +56,6 @@
     <Target Name="FL:Make">
         <MSBuild Projects="..\BPR\FL\FL.cbproj" Targets="Make"/>
     </Target>
-    <Target Name="DMS">
-        <MSBuild Projects="..\BPR\DMS\DMS.cbproj"/>
-    </Target>
-    <Target Name="DMS:Clean">
-        <MSBuild Projects="..\BPR\DMS\DMS.cbproj" Targets="Clean"/>
-    </Target>
-    <Target Name="DMS:Make">
-        <MSBuild Projects="..\BPR\DMS\DMS.cbproj" Targets="Make"/>
-    </Target>
     <Target Name="EE">
         <MSBuild Projects="..\BPR\EE\EE.cbproj"/>
     </Target>
@@ -73,6 +64,15 @@
     </Target>
     <Target Name="EE:Make">
         <MSBuild Projects="..\BPR\EE\EE.cbproj" Targets="Make"/>
+    </Target>
+    <Target Name="DMS">
+        <MSBuild Projects="..\BPR\DMS\DMS.cbproj"/>
+    </Target>
+    <Target Name="DMS:Clean">
+        <MSBuild Projects="..\BPR\DMS\DMS.cbproj" Targets="Clean"/>
+    </Target>
+    <Target Name="DMS:Make">
+        <MSBuild Projects="..\BPR\DMS\DMS.cbproj" Targets="Make"/>
     </Target>
     <Target Name="SinapToolKit">
         <MSBuild Projects="..\BPR\SinapToolKit\SinapToolKit.cbproj"/>
@@ -84,13 +84,13 @@
         <MSBuild Projects="..\BPR\SinapToolKit\SinapToolKit.cbproj" Targets="Make"/>
     </Target>
     <Target Name="Build">
-        <CallTarget Targets="DMSCOM;TopologiaDMS;FL;DMS;EE;SinapToolKit"/>
+        <CallTarget Targets="DMSCOM;TopologiaDMS;FL;EE;DMS;SinapToolKit"/>
     </Target>
     <Target Name="Clean">
-        <CallTarget Targets="DMSCOM:Clean;TopologiaDMS:Clean;FL:Clean;DMS:Clean;EE:Clean;SinapToolKit:Clean"/>
+        <CallTarget Targets="DMSCOM:Clean;TopologiaDMS:Clean;FL:Clean;EE:Clean;DMS:Clean;SinapToolKit:Clean"/>
     </Target>
     <Target Name="Make">
-        <CallTarget Targets="DMSCOM:Make;TopologiaDMS:Make;FL:Make;DMS:Make;EE:Make;SinapToolKit:Make"/>
+        <CallTarget Targets="DMSCOM:Make;TopologiaDMS:Make;FL:Make;EE:Make;DMS:Make;SinapToolKit:Make"/>
     </Target>
     <Import Project="$(BDS)\Bin\CodeGear.Group.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Group.Targets')"/>
 </Project>

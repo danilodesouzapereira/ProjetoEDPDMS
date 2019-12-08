@@ -9,19 +9,17 @@
 #include <System.Win.ScktComp.hpp>
 //---------------------------------------------------------------------------
 class TDMS;
-class TSincronizador;
 class VTApl;
 //---------------------------------------------------------------------------
 class TFormDMS : public TForm
 {
 __published:	// IDE-managed Components
-	TServerSocket *ServerSocket1;
 	TButton *Button1;
-	TMemo *Memo1;
+	TLabel *Label2;
+	TGroupBox *GroupBox1;
+	TMemo *memoResposta;
 	void __fastcall Button1Click(TObject *Sender);
-	void __fastcall ServerSocket1ClientConnect(TObject *Sender, TCustomWinSocket *Socket);
-	void __fastcall ServerSocket1ClientRead(TObject *Sender, TCustomWinSocket *Socket);
-	void __fastcall ServerSocket1ClientDisconnect(TObject *Sender, TCustomWinSocket *Socket);
+
 
 
 
@@ -30,13 +28,12 @@ public:		// User declarations
 
 	// Parâmetros
 	TDMS*           dms;
-	TSincronizador* sinc;
 	VTApl*          apl;
 
 
 	// Métodos
 	__fastcall TFormDMS(TComponent *Owner, VTApl *apl_owner, TWinControl *parent);
-   __fastcall ~TFormDMS();
+	__fastcall ~TFormDMS();
 };
 //---------------------------------------------------------------------------
 extern PACKAGE TFormDMS *FormDMS;

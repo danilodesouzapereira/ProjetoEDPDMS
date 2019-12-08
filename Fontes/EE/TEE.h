@@ -7,10 +7,12 @@
 #include <Vcl.StdCtrls.hpp>
 #include <Vcl.ComCtrls.hpp>
 //---------------------------------------------------------------------------
+#include "VTEE.h"
+//---------------------------------------------------------------------------
 class VTApl;
 class VTRedes;
 //---------------------------------------------------------------------------
-class TEE : public TObject
+class TEE : public VTEE
 {
 public:
 	// Parãmetros

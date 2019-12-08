@@ -4,6 +4,6 @@
     <Transaction>2019/10/18 18:59:20.000.270,C:\Users\Sinapsis\Documents\Embarcadero\Studio\Projects\ProjectGroup1.groupproj=Z:\SINAPgrid\ProjetoEdpDMS\BPG\ProjectGroupDMS.groupproj</Transaction>
   </Transactions>
 	<Default.Personality>
-		<Projects ActiveProject="C:\Projetos\SINAPgrid\ProjetoEdpDMS\BPR\Topologia\TopologiaDMS.cbproj"/>
+		<Projects ActiveProject="C:\Projetos\SINAPgrid\ProjetoEdpDMS\BPR\DMS\DMS.cbproj"/>
 	</Default.Personality>
 </BorlandProject>

@@ -216,6 +216,9 @@
             <DependentOn>..\..\Fontes\TopologiaDMS\TTrafo.h</DependentOn>
             <BuildOrder>21</BuildOrder>
         </CppCompile>
+        <None Include="..\..\Fontes\TopologiaDMS\VTTopologiaDMS.h">
+            <BuildOrder>24</BuildOrder>
+        </None>
         <CppCompile Include="..\..\Fontes\Uteis\TMetodosAuxiliares.cpp">
             <DependentOn>..\..\Fontes\Uteis\TMetodosAuxiliares.h</DependentOn>
             <BuildOrder>21</BuildOrder>
@@ -249,9 +252,8 @@
                 </Excluded_Packages>
             </CPlusPlusBuilder.Personality>
             <Deployment Version="3">
-                <DeployFile LocalName="Z:\SINAPgrid\PlataformaSinap\Tmp\Bin\Win32\Debug\TopologiaDMS.tds" Configuration="Debug" Class="DebugSymbols">
+                <DeployFile Condition="'$(DynamicRTL)'=='true' And '$(Multithreaded)'=='true'" LocalName="$(BDS)\bin\cc32250mt.dll" Class="DependencyModule">
                     <Platform Name="Win32">
-                        <RemoteName>TopologiaDMS.tds</RemoteName>
                         <Overwrite>true</Overwrite>
                     </Platform>
                 </DeployFile>
@@ -290,7 +292,7 @@
                         <Overwrite>true</Overwrite>
                     </Platform>
                 </DeployFile>
-                <DeployFile LocalName="Z:\SINAPgrid\PlataformaSinap\Tmp\Bin\Win32\Debug\TopologiaDMS.dll" Configuration="Debug" Class="ProjectOutput">
+                <DeployFile LocalName="..\..\..\PlataformaSinap\Tmp\Bin\Win32\Debug\TopologiaDMS.dll" Configuration="Debug" Class="ProjectOutput">
                     <Platform Name="Win32">
                         <RemoteName>TopologiaDMS.dll</RemoteName>
                         <Overwrite>true</Overwrite>
@@ -306,8 +308,9 @@
                         <Overwrite>true</Overwrite>
                     </Platform>
                 </DeployFile>
-                <DeployFile Condition="'$(DynamicRTL)'=='true' And '$(Multithreaded)'=='true'" LocalName="$(BDS)\bin\cc32250mt.dll" Class="DependencyModule">
+                <DeployFile LocalName="..\..\..\PlataformaSinap\Tmp\Bin\Win32\Debug\TopologiaDMS.tds" Configuration="Debug" Class="DebugSymbols">
                     <Platform Name="Win32">
+                        <RemoteName>TopologiaDMS.tds</RemoteName>
                         <Overwrite>true</Overwrite>
                     </Platform>
                 </DeployFile>

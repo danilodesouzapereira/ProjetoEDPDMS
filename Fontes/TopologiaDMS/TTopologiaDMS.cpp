@@ -17,27 +17,45 @@
 #include <PlataformaSinap\Fontes\Rede\VTLigacao.h>
 #include <PlataformaSinap\Fontes\Rede\VTRede.h>
 #include <PlataformaSinap\Fontes\Rede\VTRedes.h>
+#include <PlataformaSinap\Fontes\Rede\VTTipoRede.h>
 //---------------------------------------------------------------------------
 #pragma package(smart_init)
 //---------------------------------------------------------------------------
-__fastcall TTopologiaDMS::TTopologiaDMS(VTApl* apl, VTRede* rede)
+VTTopologiaDMS* __fastcall NewObjTopologiaDMS(VTApl* apl, String codigoRede)
+{
+	return(new TTopologiaDMS(apl, codigoRede));
+}
+//---------------------------------------------------------------------------
+__fastcall TTopologiaDMS::TTopologiaDMS(VTApl* apl, String codigoRede)
 {
 	// Obtém parâmetros elementares
 	this->apl = apl;
-	this->rede = rede;
+	rede = DeterminaObjRede(codigoRede);
 
 	// Inicializações
 	disjuntor = NULL;
 	lisBlocoRad = new TList;
 	lisReligadoras = new TList;
-
-	IniciaTopologiaRede();
 }
 //---------------------------------------------------------------------------
-__fastcall TTopologiaDMS::~TTopologiaDMS()
+__fastcall TTopologiaDMS::~TTopologiaDMS(void)
 {
 	// Destroi objetos
 	DestroiEqptosTopologia();
+}
+//---------------------------------------------------------------------------
+VTRede* __fastcall TTopologiaDMS::DeterminaObjRede(String codigoRede)
+{
+	VTRedes* redes = (VTRedes*)apl->GetObject(__classid(VTRedes));
+	TList* lisRedes = redes->LisRede();
+	for(int i=0; i<lisRedes->Count; i++)
+	{
+		VTRede* rede = (VTRede*) lisRedes->Items[i];
+		if(!rede->Carregada || rede->TipoRede->Segmento != redePRI) continue;
+		if(rede->Codigo.AnsiCompare(codigoRede) == 0)
+			return(rede);
+	}
+	return(NULL);
 }
 //---------------------------------------------------------------------------
 void __fastcall TTopologiaDMS::DestroiEqptosTopologia()

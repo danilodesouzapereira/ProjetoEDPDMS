@@ -7,6 +7,8 @@
 #include <Vcl.StdCtrls.hpp>
 #include <Vcl.ComCtrls.hpp>
 //---------------------------------------------------------------------------
+#include "VTTopologiaDMS.h"
+//---------------------------------------------------------------------------
 class TDisjuntor;
 class VTApl;
 class VTBloco;
@@ -14,7 +16,7 @@ class VTChave;
 class VTLigacao;
 class VTRede;
 //---------------------------------------------------------------------------
-class TTopologiaDMS : public TObject
+class TTopologiaDMS : public VTTopologiaDMS
 {
 public:
 	// Parâmetros elementares
@@ -26,12 +28,13 @@ public:
 	TList* lisReligadoras;
 
 	// Métodos
-				__fastcall TTopologiaDMS(VTApl* apl, VTRede* rede);
-				__fastcall ~TTopologiaDMS();
+				__fastcall TTopologiaDMS(VTApl* apl, String codigoRede);
+				__fastcall ~TTopologiaDMS(void);
 
 	VTChave* __fastcall ChaveBloco(VTBloco* bloco);
 	void     __fastcall DestroiEqptosTopologia();
 	void     __fastcall DeterminaBlocosRadiais();
+	VTRede*  __fastcall DeterminaObjRede(String codigoRede);
 	void     __fastcall IniciaTopologiaRede();
 	void     __fastcall OrdenaBlocosRadiais();
 

@@ -62,8 +62,8 @@
         <ILINK_GenerateImportLibrary>true</ILINK_GenerateImportLibrary>
         <_TCHARMapping>wchar_t</_TCHARMapping>
         <SanitizedProjectName>DMS</SanitizedProjectName>
-        <IncludePath>..\..\Fontes\TopologiaDMS\;..\..\Fontes\DMS\;..\..\DLL_Inc\;$(IncludePath)</IncludePath>
-        <ILINK_LibraryPath>..\..\Fontes\TopologiaDMS\;..\..\Fontes\DMS\;..\..\DLL_Inc\;$(ILINK_LibraryPath)</ILINK_LibraryPath>
+        <IncludePath>..\..\Fontes\FL\;..\..\Fontes\TopologiaDMS\;..\..\Fontes\DMS\;..\..\DLL_Inc\;$(IncludePath)</IncludePath>
+        <ILINK_LibraryPath>..\..\Fontes\FL\;..\..\Fontes\TopologiaDMS\;..\..\Fontes\DMS\;..\..\DLL_Inc\;$(ILINK_LibraryPath)</ILINK_LibraryPath>
     </PropertyGroup>
     <PropertyGroup Condition="'$(Base_Win32)'!=''">
         <PackageImports>adortl;appanalytics;bcbie;bcbsmp;bindcomp;bindcompdbx;bindcompfmx;bindcompvcl;bindengine;CustomIPTransport;DataSnapClient;DataSnapCommon;DataSnapConnectors;DatasnapConnectorsFreePascal;DataSnapIndy10ServerTransport;DataSnapNativeClient;DataSnapProviderClient;DataSnapServer;DataSnapServerMidas;dbexpress;dbrtl;dbxcds;DbxClientDriver;DbxCommonDriver;DBXDb2Driver;DBXFirebirdDriver;DBXInformixDriver;DBXInterBaseDriver;DBXMSSQLDriver;DBXMySQLDriver;DBXOdbcDriver;DBXOracleDriver;DBXSqliteDriver;DBXSybaseASADriver;DBXSybaseASEDriver;dsnap;dsnapcon;dsnapxml;emsedge;emshosting;FireDACADSDriver;FireDACASADriver;FireDACCommonODBC;FireDACDb2Driver;FireDACDBXDriver;FireDACDSDriver;FireDACInfxDriver;FireDACMongoDBDriver;FireDACMSAccDriver;FireDACMSSQLDriver;FireDACMySQLDriver;FireDACODBCDriver;FireDACOracleDriver;FireDACPgDriver;FireDACTDataDriver;fmx;fmxase;fmxdae;fmxFireDAC;fmxobj;FMXTee;FmxTeeUI;frx25;frxDB25;frxe25;frxTee25;ibmonitor;ibxbindings;ibxpress;IndyCore;IndyIPClient;IndyIPCommon;IndyIPServer;IndyProtocols;IndySystem;inetdb;inetdbxpress;Intraweb;rtl;svn;Tee;TeeDB;TeeUI;tethering;vcl;vclactnband;vcldb;vcldsnap;vclFireDAC;vclib;vclie;vclimg;VCLRESTComponents;VclSmp;vcltouch;vclwinx;vclx;xmlrtl;$(PackageImports)</PackageImports>
@@ -107,10 +107,11 @@
         <BPILibOutputDir>$(PROJETOS)\ProjetoEdpDMS\DLL_Lib\$(Platform)\$(Config)</BPILibOutputDir>
         <VerInfo_IncludeVerInfo>true</VerInfo_IncludeVerInfo>
         <VerInfo_Locale>1033</VerInfo_Locale>
-        <IncludePath>$(PROJETOS)\;$(ProjetoEDPSimplex)\..\;$(PROJETOS)\..\;$(ProjetoEDPDMS)\..\;$(ProjetoEDPDMS)\;..\..\Fontes\SinapToolKit\Socorro\;..\..\Fontes\SinapToolKit\Forms\;..\..\Fontes\SinapToolKit\;$(PROJETOS);$(SINAP);$(IncludePath)</IncludePath>
+        <IncludePath>$(PROJETOS)\;$(ProjetoEDPSimplex)\..\;$(PROJETOS)\..\;$(ProjetoEDPDMS)\..\;$(ProjetoEDPDMS)\;..\..\Fontes\SinapToolKit\Socorro\;..\..\Fontes\SinapToolKit\Forms\;..\..\Fontes\SinapToolKit\;$(PROJETOS);$(SINAP);C:\Projetos\SINAPgrid\ProjetoEdpDMS\Fontes\FL;$(IncludePath)</IncludePath>
         <FinalOutputDir>$(SINAP_BIN)\$(Platform)\$(Config)</FinalOutputDir>
         <IntermediateOutputDir>$(PROJETOS)\ProjetoEdpDMS\tmp\$(Platform)\$(Config)</IntermediateOutputDir>
         <Debugger_HostApplication>$(SINAP_BIN)\Win32\Debug\SINAPgrid.exe</Debugger_HostApplication>
+        <ILINK_LibraryPath>C:\Projetos\SINAPgrid\ProjetoEdpDMS\Fontes\FL;$(ILINK_LibraryPath)</ILINK_LibraryPath>
     </PropertyGroup>
     <PropertyGroup Condition="'$(Cfg_2)'!=''">
         <Defines>NDEBUG;$(Defines)</Defines>
@@ -142,10 +143,6 @@
         </LibFiles>
         <LibFiles Include="..\..\DLL_Lib\Win32\Release\FL.lib" Condition="'$(Platform)'=='Win32'">
             <BuildOrder>8</BuildOrder>
-            <IgnorePath>true</IgnorePath>
-        </LibFiles>
-        <LibFiles Include="..\..\DLL_Lib\Win32\Release\TopologiaDMS.lib" Condition="'$(Platform)'=='Win32'">
-            <BuildOrder>9</BuildOrder>
             <IgnorePath>true</IgnorePath>
         </LibFiles>
         <None Include="..\..\Fontes\DMS\Modelos.h">
@@ -195,6 +192,12 @@
                 </Excluded_Packages>
             </CPlusPlusBuilder.Personality>
             <Deployment Version="3">
+                <DeployFile LocalName="..\..\..\PlataformaSinap\Tmp\Bin\Win32\Debug\DMS.dll" Configuration="Debug" Class="ProjectOutput">
+                    <Platform Name="Win32">
+                        <RemoteName>DMS.dll</RemoteName>
+                        <Overwrite>true</Overwrite>
+                    </Platform>
+                </DeployFile>
                 <DeployFile Condition="'$(DynamicRTL)'=='true' And '$(Multithreaded)'=='true'" LocalName="$(BDS)\bin\cc32c250mt.dll" Class="DependencyModule">
                     <Platform Name="Win32">
                         <Overwrite>true</Overwrite>
@@ -220,13 +223,7 @@
                         <Overwrite>true</Overwrite>
                     </Platform>
                 </DeployFile>
-                <DeployFile LocalName="Z:\SINAPgrid\PlataformaSinap\Tmp\Bin\Win32\Debug\DMS.dll" Configuration="Debug" Class="ProjectOutput">
-                    <Platform Name="Win32">
-                        <RemoteName>DMS.dll</RemoteName>
-                        <Overwrite>true</Overwrite>
-                    </Platform>
-                </DeployFile>
-                <DeployFile LocalName="Z:\SINAPgrid\PlataformaSinap\Tmp\Bin\Win32\Debug\DMS.tds" Configuration="Debug" Class="DebugSymbols">
+                <DeployFile LocalName="..\..\..\PlataformaSinap\Tmp\Bin\Win32\Debug\DMS.tds" Configuration="Debug" Class="DebugSymbols">
                     <Platform Name="Win32">
                         <RemoteName>DMS.tds</RemoteName>
                         <Overwrite>true</Overwrite>

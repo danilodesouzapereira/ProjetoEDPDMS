@@ -4,7 +4,7 @@
 //---------------------------------------------------------------------------
 #include <ProjetoEDPDMS\DLL_Inc\TopologiaDMS.h>
 #include <PlataformaSinap\Fontes\Apl\VTApl.h>
-#include <ProjetoEDPDMS\Fontes\TopologiaDMS\TTopologiaDMS.h>
+#include <ProjetoEDPDMS\Fontes\TopologiaDMS\VTTopologiaDMS.h>
 //---------------------------------------------------------------------------
 #pragma hdrstop
 #pragma argsused
@@ -14,14 +14,8 @@ int WINAPI DllEntryPoint(HINSTANCE hinst, unsigned long reason, void* lpReserved
 	return 1;
 }
 //---------------------------------------------------------------------------
-EXPORT TTopologiaDMS* __fastcall DLL_NewTopologiaDMS(VTApl *apl_owner, VTRede* rede)
+EXPORT VTTopologiaDMS* __fastcall DLL_NewTopologiaDMS(VTApl *apl_owner, String codigoRede)
 {
-	TTopologiaDMS* topologiaDMS = new TTopologiaDMS(apl_owner, rede);
-	return(topologiaDMS);
-}
-//---------------------------------------------------------------------------
-EXPORT void __fastcall DLL_DeleteTopologiaDMS(TTopologiaDMS* topologiaDMS)
-{
-	delete topologiaDMS;
+	return(NewObjTopologiaDMS(apl_owner, codigoRede));
 }
 //---------------------------------------------------------------------------

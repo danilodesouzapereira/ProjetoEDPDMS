@@ -1,9 +1,9 @@
 object FormDMSCOM: TFormDMSCOM
   Left = 0
   Top = 0
-  Caption = 'Comunica'#231#227'o DMS'
-  ClientHeight = 299
-  ClientWidth = 340
+  Caption = 'M'#243'dulo de comunica'#231#227'o'
+  ClientHeight = 379
+  ClientWidth = 276
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -11,51 +11,68 @@ object FormDMSCOM: TFormDMSCOM
   Font.Name = 'Tahoma'
   Font.Style = []
   OldCreateOrder = False
-  OnClose = FormClose
   PixelsPerInch = 96
   TextHeight = 13
+  object Label2: TLabel
+    Left = 8
+    Top = 19
+    Width = 139
+    Height = 16
+    Caption = 'Adicionar novo processo'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -13
+    Font.Name = 'Tahoma'
+    Font.Style = []
+    ParentFont = False
+  end
   object Button1: TButton
-    Left = 96
-    Top = 16
-    Width = 145
-    Height = 33
-    Caption = 'Conectar'
+    Left = 168
+    Top = 15
+    Width = 105
+    Height = 28
+    Caption = 'Adicionar'
     TabOrder = 0
     OnClick = Button1Click
   end
-  object Button2: TButton
-    Left = 96
-    Top = 131
-    Width = 145
-    Height = 33
-    Caption = 'Enviar texto'
+  object GroupBox1: TGroupBox
+    Left = 0
+    Top = 224
+    Width = 273
+    Height = 153
+    Caption = 'Socket Server'
     TabOrder = 1
-    OnClick = Button2Click
+    object Memo1: TMemo
+      Left = 2
+      Top = 15
+      Width = 269
+      Height = 136
+      Align = alClient
+      TabOrder = 0
+      ExplicitLeft = 16
+      ExplicitTop = 24
+      ExplicitWidth = 289
+      ExplicitHeight = 73
+    end
   end
-  object edtMsg: TEdit
-    Left = 32
-    Top = 104
+  object GroupBox2: TGroupBox
+    Left = 0
+    Top = 56
     Width = 273
-    Height = 21
+    Height = 162
+    Caption = 'Fila de processos'
     TabOrder = 2
-    Text = 'edtMsg'
-  end
-  object Memo1: TMemo
-    Left = 32
-    Top = 208
-    Width = 273
-    Height = 73
-    Lines.Strings = (
-      'Memo1')
-    TabOrder = 3
-  end
-  object ClientSocket1: TClientSocket
-    Active = False
-    ClientType = ctNonBlocking
-    Port = 2000
-    OnRead = ClientSocket1Read
-    OnError = ClientSocket1Error
-    Left = 16
-    Top = 8
+    object Memo2: TMemo
+      Left = 2
+      Top = 15
+      Width = 269
+      Height = 145
+      Align = alClient
+      TabOrder = 0
+      ExplicitLeft = 8
+      ExplicitTop = 47
+      ExplicitWidth = 289
+      ExplicitHeight = 73
+    end
   end
 end
