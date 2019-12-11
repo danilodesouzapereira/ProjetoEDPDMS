@@ -6,7 +6,6 @@
 //---------------------------------------------------------------------------
 #include <ProjetoEDPDMS\DLL_Inc\EE.h>
 #include <ProjetoEDPDMS\DLL_Inc\FL.h>
-#include <ProjetoEDPDMS\Fontes\DMS\Modelos.h>
 #include <ProjetoEDPDMS\Fontes\EE\VTEE.h>
 #include <ProjetoEDPDMS\Fontes\FL\VTFL.h>
 //---------------------------------------------------------------------------
@@ -18,6 +17,7 @@
 //---------------------------------------------------------------------------
 __fastcall TDMS::TDMS(VTApl* apl, TFormDMS* formDMS)
 {
+	// Salva parâmetros
 	this->apl = apl;
 	this->formDMS = formDMS;
 	path = (VTPath*) apl->GetObject(__classid(VTPath));
@@ -27,12 +27,9 @@ __fastcall TDMS::TDMS(VTApl* apl, TFormDMS* formDMS)
 	comando = "C:\\Projetos\\SINAPgrid\\PlataformaSinap\\Tmp\\Bin\\Win32\\Debug\\DMSCOM.exe";
 	wchar_t* wchar_comando = new wchar_t[comando.Length()];
 	comando.WideChar(wchar_comando, comando.Length());
-//	std::system(comando.c_str());
-//   ShellExecute(0, "open", "cmd.exe", comando, 0, SW_HIDE);
-//	ShellExecute(0, NULL, L"C:\\Sinapsis\\SINAPgrid\\Bin\\DMSCOM.exe", L"-l", 0, SW_SHOW);
 	ShellExecute(0, NULL, wchar_comando, L"-l", 0, SW_SHOW);
 
-
+	// Cria objeto sincronizador
 	sinc = new TSincronizador(this);
 }
 //---------------------------------------------------------------------------
@@ -42,30 +39,27 @@ __fastcall TDMS::~TDMS()
    delete sinc;
 }
 //---------------------------------------------------------------------------
-void __fastcall TDMS::IniciaProcessoFL()
+void __fastcall TDMS::ExecutaProcessoFL(Processo* processoFL, SaidaFL* saidaFL_EXT)
 {
-	EntradaFL* entradaFL = new EntradaFL();
-	entradaFL->codigoRede = "ALE06";
-
-	// Cria objeto de localizador, executa e destroi objeto
+	// Cria objeto de localizador e executa processo de localização
 	localizador = DLL_NewFL(apl);
-	localizador->ExecutaProcesso(entradaFL);
+	localizador->ExecutaProcessoFL(processoFL);
 
-	// Destroi objetos
-	delete entradaFL;
+	// Obtém os resultados (saída)
+	localizador->ObtemLocalizacao(saidaFL_EXT);
+
+	// Destroi objeto de localização
 	delete localizador;
 }
 //---------------------------------------------------------------------------
 void __fastcall TDMS::IniciaProcessoEstimacao()
 {
+	// Cria objeto de estimação de estados (EE) e executa a EE
 	estimador = DLL_NewEE(apl);
 	estimador->ExecutaEstimacaoDiaria();
+
+	// Destroi objeto de EE
 	delete estimador;
-}
-//---------------------------------------------------------------------------
-void __fastcall TDMS::CONSULTA_COMUNICACAO_ConsultaEventoNovo()
-{
-   sinc->CONSULTA_COMUNICACAO_ConsultaEventoNovo();
 }
 //---------------------------------------------------------------------------
 

@@ -3,23 +3,23 @@
 	<Transactions>
     <Transaction>2019/10/18 18:58:17.000.857,=C:\Users\Sinapsis\Documents\Embarcadero\Studio\Projects\Project1PCH1.h</Transaction>
     <Transaction>2019/10/18 18:58:17.000.869,=C:\Users\Sinapsis\Documents\Embarcadero\Studio\Projects\File1.cpp</Transaction>
-    <Transaction>2019/10/18 18:58:55.000.458,C:\Users\Sinapsis\Documents\Embarcadero\Studio\Projects\File1.cpp=Z:\SINAPgrid\ProjetoEdpDMS\BPR\DMS\DMS.cpp</Transaction>
-    <Transaction>2019/10/18 18:59:02.000.017,C:\Users\Sinapsis\Documents\Embarcadero\Studio\Projects\Project1PCH1.h=Z:\SINAPgrid\ProjetoEdpDMS\BPR\DMS\DMSPCH1.h</Transaction>
-    <Transaction>2019/10/18 18:59:07.000.809,C:\Users\Sinapsis\Documents\Embarcadero\Studio\Projects\Project1.cbproj=Z:\SINAPgrid\ProjetoEdpDMS\BPR\DMS\DMS.cbproj</Transaction>
+    <Transaction>2019/10/18 18:58:55.000.458,Z:\SINAPgrid\ProjetoEdpDMS\BPR\DMS\DMS.cpp=C:\Users\Sinapsis\Documents\Embarcadero\Studio\Projects\File1.cpp</Transaction>
+    <Transaction>2019/10/18 18:59:02.000.017,Z:\SINAPgrid\ProjetoEdpDMS\BPR\DMS\DMSPCH1.h=C:\Users\Sinapsis\Documents\Embarcadero\Studio\Projects\Project1PCH1.h</Transaction>
+    <Transaction>2019/10/18 18:59:07.000.809,Z:\SINAPgrid\ProjetoEdpDMS\BPR\DMS\DMS.cbproj=C:\Users\Sinapsis\Documents\Embarcadero\Studio\Projects\Project1.cbproj</Transaction>
     <Transaction>2019/10/18 19:35:30.000.483,=Z:\SINAPgrid\ProjetoEdpDMS\DLL_Inc\DMS.h</Transaction>
     <Transaction>2019/10/18 19:38:11.000.589,=Z:\SINAPgrid\ProjetoEdpDMS\BPR\DMS\Unit1.cpp</Transaction>
-    <Transaction>2019/10/18 19:38:25.000.672,Z:\SINAPgrid\ProjetoEdpDMS\BPR\DMS\Unit1.cpp=Z:\SINAPgrid\ProjetoEdpDMS\Fontes\DMS\TFormDMS.cpp</Transaction>
-    <Transaction>2019/10/18 19:38:25.000.672,Z:\SINAPgrid\ProjetoEdpDMS\BPR\DMS\Unit1.dfm=Z:\SINAPgrid\ProjetoEdpDMS\Fontes\DMS\TFormDMS.dfm</Transaction>
-    <Transaction>2019/10/18 19:38:25.000.672,Z:\SINAPgrid\ProjetoEdpDMS\BPR\DMS\Unit1.h=Z:\SINAPgrid\ProjetoEdpDMS\Fontes\DMS\TFormDMS.h</Transaction>
+    <Transaction>2019/10/18 19:38:25.000.672,Z:\SINAPgrid\ProjetoEdpDMS\Fontes\DMS\TFormDMS.cpp=Z:\SINAPgrid\ProjetoEdpDMS\BPR\DMS\Unit1.cpp</Transaction>
+    <Transaction>2019/10/18 19:38:25.000.672,Z:\SINAPgrid\ProjetoEdpDMS\Fontes\DMS\TFormDMS.h=Z:\SINAPgrid\ProjetoEdpDMS\BPR\DMS\Unit1.h</Transaction>
+    <Transaction>2019/10/18 19:38:25.000.672,Z:\SINAPgrid\ProjetoEdpDMS\Fontes\DMS\TFormDMS.dfm=Z:\SINAPgrid\ProjetoEdpDMS\BPR\DMS\Unit1.dfm</Transaction>
+    <Transaction>2019/10/19 08:21:08.000.483,=Z:\SINAPgrid\ProjetoEdpDMS\DLL_Lib\Win32\Release\TopologiaDMS.lib</Transaction>
     <Transaction>2019/10/19 08:21:08.000.471,=Z:\SINAPgrid\ProjetoEdpDMS\DLL_Lib\Win32\Release\FL.lib</Transaction>
     <Transaction>2019/10/19 08:21:08.000.460,=Z:\SINAPgrid\ProjetoEdpDMS\DLL_Lib\Win32\Release\EE.lib</Transaction>
-    <Transaction>2019/10/19 08:21:08.000.483,=Z:\SINAPgrid\ProjetoEdpDMS\DLL_Lib\Win32\Release\TopologiaDMS.lib</Transaction>
     <Transaction>2019/10/19 08:52:01.000.568,=Z:\SINAPgrid\ProjetoEdpDMS\BPR\DMS\Unit1.cpp</Transaction>
-    <Transaction>2019/10/19 08:52:12.000.448,Z:\SINAPgrid\ProjetoEdpDMS\Fontes\DMS\TDMS.cpp=Z:\SINAPgrid\ProjetoEdpDMS\BPR\DMS\Unit1.cpp</Transaction>
-    <Transaction>2019/10/19 08:52:12.000.448,Z:\SINAPgrid\ProjetoEdpDMS\Fontes\DMS\TDMS.h=Z:\SINAPgrid\ProjetoEdpDMS\BPR\DMS\Unit1.h</Transaction>
+    <Transaction>2019/10/19 08:52:12.000.448,Z:\SINAPgrid\ProjetoEdpDMS\BPR\DMS\Unit1.cpp=Z:\SINAPgrid\ProjetoEdpDMS\Fontes\DMS\TDMS.cpp</Transaction>
+    <Transaction>2019/10/19 08:52:12.000.448,Z:\SINAPgrid\ProjetoEdpDMS\BPR\DMS\Unit1.h=Z:\SINAPgrid\ProjetoEdpDMS\Fontes\DMS\TDMS.h</Transaction>
     <Transaction>2019/10/19 08:58:54.000.047,=Z:\SINAPgrid\ProjetoEdpDMS\BPR\DMS\Unit1.cpp</Transaction>
-    <Transaction>2019/10/19 08:59:09.000.098,Z:\SINAPgrid\ProjetoEdpDMS\Fontes\DMS\TSincronizador.cpp=Z:\SINAPgrid\ProjetoEdpDMS\BPR\DMS\Unit1.cpp</Transaction>
-    <Transaction>2019/10/19 08:59:09.000.098,Z:\SINAPgrid\ProjetoEdpDMS\Fontes\DMS\TSincronizador.h=Z:\SINAPgrid\ProjetoEdpDMS\BPR\DMS\Unit1.h</Transaction>
+    <Transaction>2019/10/19 08:59:09.000.098,Z:\SINAPgrid\ProjetoEdpDMS\BPR\DMS\Unit1.cpp=Z:\SINAPgrid\ProjetoEdpDMS\Fontes\DMS\TSincronizador.cpp</Transaction>
+    <Transaction>2019/10/19 08:59:09.000.098,Z:\SINAPgrid\ProjetoEdpDMS\BPR\DMS\Unit1.h=Z:\SINAPgrid\ProjetoEdpDMS\Fontes\DMS\TSincronizador.h</Transaction>
     <Transaction>2019/10/20 14:06:33.000.981,=Z:\SINAPgrid\ProjetoEdpDMS\Fontes\DMS\Modelos.h</Transaction>
     <Transaction>2019/12/06 14:48:32.000.132,C:\Projetos\SINAPgrid\ProjetoEdpDMS\DLL_Lib\Win32\Release\TopologiaDMS.lib=</Transaction>
     <Transaction>2019/12/06 14:48:41.000.260,=C:\Projetos\SINAPgrid\ProjetoEdpDMS\DLL_Lib\Win32\Release\TopologiaDMS.lib</Transaction>
@@ -46,6 +46,13 @@
     <Transaction>2019/12/07 07:29:00.000.273,Z:\SINAPgrid\ProjetoEdpDMS\DLL_Lib\Win32\Release\TopologiaDMS.lib=</Transaction>
     <Transaction>2019/12/07 12:29:46.000.033,=Z:\SINAPgrid\ProjetoEdpDMS\Fontes\FL\TFL.cpp</Transaction>
     <Transaction>2019/12/07 12:30:14.000.511,Z:\SINAPgrid\ProjetoEdpDMS\Fontes\FL\TFL.cpp=</Transaction>
+    <Transaction>2019/12/10 13:01:42.000.248,=Z:\SINAPgrid\ProjetoEdpDMS\BPR\DMS\File1.h</Transaction>
+    <Transaction>2019/12/10 13:06:29.000.927,Z:\SINAPgrid\ProjetoEdpDMS\Fontes\Uteis\Constantes.h=Z:\SINAPgrid\ProjetoEdpDMS\BPR\DMS\File1.h</Transaction>
+    <Transaction>2019/12/10 13:15:00.000.068,Z:\SINAPgrid\ProjetoEdpDMS\Fontes\DMS\Modelos.h=</Transaction>
+    <Transaction>2019/12/10 13:15:29.000.730,=Z:\SINAPgrid\ProjetoEdpDMS\Fontes\Uteis\Modelos.h</Transaction>
+    <Transaction>2019/12/10 13:16:13.000.037,Z:\SINAPgrid\ProjetoEdpDMS\Fontes\Uteis\Constantes.h=</Transaction>
+    <Transaction>2019/12/10 13:16:14.000.046,Z:\SINAPgrid\ProjetoEdpDMS\Fontes\Uteis\Modelos.h=</Transaction>
+    <Transaction>2019/12/10 13:26:02.000.109,=Z:\SINAPgrid\ProjetoEdpDMS\Fontes\Uteis\TMetodosAuxiliares.cpp</Transaction>
   </Transactions>
 	<ProjectSortOrder AutoSort="0" SortType="0">
     <File Path="..\..\..\ProjetoEdpDMS"/>
@@ -53,7 +60,6 @@
     <File Path="..\..\DLL_Inc\DMS.h"/>
     <File Path="..\..\Fontes"/>
     <File Path="..\..\Fontes\DMS"/>
-    <File Path="..\..\Fontes\DMS\Modelos.h"/>
     <File Path="..\..\Fontes\DMS\TDMS.cpp"/>
     <File Path="..\..\Fontes\DMS\TDMS.cpp"/>
     <File Path="..\..\Fontes\DMS\TDMS.h"/>
@@ -64,6 +70,10 @@
     <File Path="..\..\Fontes\DMS\TSincronizador.cpp"/>
     <File Path="..\..\Fontes\DMS\TSincronizador.cpp"/>
     <File Path="..\..\Fontes\DMS\TSincronizador.h"/>
+    <File Path="..\..\Fontes\Uteis"/>
+    <File Path="..\..\Fontes\Uteis\TMetodosAuxiliares.cpp"/>
+    <File Path="..\..\Fontes\Uteis\TMetodosAuxiliares.cpp"/>
+    <File Path="..\..\Fontes\Uteis\TMetodosAuxiliares.h"/>
     <File Path="DMS.cpp"/>
     <File Path="DMSPCH1.h"/>
     <File Path="..\..\DLL_Lib\Win32\Release\EE.lib"/>

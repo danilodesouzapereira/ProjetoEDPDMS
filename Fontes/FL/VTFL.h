@@ -1,4 +1,3 @@
-
 //---------------------------------------------------------------------------
 #ifndef VTFLH
 #define VTFLH
@@ -11,23 +10,28 @@
 class TTopologiaDMS;
 class VTApl;
 //---------------------------------------------------------------------------
-struct EntradaFL;
+struct Processo;
+struct SaidaFL;
 //---------------------------------------------------------------------------
 class VTFL : public TObject
 {
 public:
+
+	// Parâmetros
+	Processo*      processoFL;
+	SaidaFL*       saidaFL;
+	TTopologiaDMS* topologiaDMS;
+	VTApl*         apl;
+
+
 	// Métodos
 		  __fastcall  VTFL(void) {};
 		  __fastcall ~VTFL(void) {};
 
 	virtual void __fastcall CriaObjTopologia() = 0;
+	virtual void __fastcall ExecutaProcessoFL(Processo* processoFL) = 0;
 	virtual void __fastcall IniciaObjTopologia() = 0;
-	virtual void __fastcall ExecutaProcesso(EntradaFL* entradaFL) = 0;
-
-	// Parãmetros
-	EntradaFL*     entradaFL;
-	TTopologiaDMS* topologiaDMS;
-   VTApl*         apl;
+	virtual void __fastcall ObtemLocalizacao(SaidaFL* saidaFL) = 0;
 };
 //---------------------------------------------------------------------------
 VTFL* __fastcall NewObjFL(VTApl *apl);

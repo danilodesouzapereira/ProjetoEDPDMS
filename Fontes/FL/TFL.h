@@ -12,23 +12,37 @@
 class VTTopologiaDMS;
 class VTApl;
 //---------------------------------------------------------------------------
-struct EntradaFL;
+struct Processo;
+struct SaidaFL;
 //---------------------------------------------------------------------------
 class TFL : public VTFL
 {
 public:
-	// Métodos
+
+	// :::::::::::::::::::: Parâmetros ::::::::::::::::::::
+	int             tipoLocalizacao;
+	Processo*       processoFL;
+	SaidaFL*        saidaFL;
+	VTApl*          apl;
+	VTTopologiaDMS* topologiaDMS;
+
+
+
+	// :::::::::::::::::::: Métodos ::::::::::::::::::::
+	// Construtor e destrutor
 		  __fastcall TFL(VTApl* apl);
 		  __fastcall ~TFL(void);
 
+	// Métodos principais
 	void __fastcall CriaObjTopologia();
+	void __fastcall ExecutaProcessoFL(Processo* processoFL);
 	void __fastcall IniciaObjTopologia();
-	void __fastcall ExecutaProcesso(EntradaFL* entradaFL);
 
-	// Parãmetros
-	EntradaFL*     entradaFL;
-	VTTopologiaDMS* topologiaDMS;
-   VTApl*         apl;
+	// Geração do objetos de saída (solução da localização)
+	void __fastcall GeraObjetoSaida_Diagnostico();
+	void __fastcall GeraObjetoSaida_Gerais();
+	void __fastcall GeraObjetoSaida_Solucoes();
+	void __fastcall ObtemLocalizacao(SaidaFL* saidaFL);
 };
 //---------------------------------------------------------------------------
 #endif

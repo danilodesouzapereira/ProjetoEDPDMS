@@ -21,7 +21,7 @@ __fastcall TFormDMSCOM::~TFormDMSCOM(void)
 //---------------------------------------------------------------------------
 void __fastcall TFormDMSCOM::Button1Click(TObject *Sender)
 {
-	moduloCom->AdicionarProcesso();
+	moduloCom->AdicionarAlarme();
 }
 //---------------------------------------------------------------------------
 

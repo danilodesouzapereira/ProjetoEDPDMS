@@ -49,10 +49,6 @@ object FormDMSCOM: TFormDMSCOM
       Height = 136
       Align = alClient
       TabOrder = 0
-      ExplicitLeft = 16
-      ExplicitTop = 24
-      ExplicitWidth = 289
-      ExplicitHeight = 73
     end
   end
   object GroupBox2: TGroupBox
@@ -69,10 +65,6 @@ object FormDMSCOM: TFormDMSCOM
       Height = 145
       Align = alClient
       TabOrder = 0
-      ExplicitLeft = 8
-      ExplicitTop = 47
-      ExplicitWidth = 289
-      ExplicitHeight = 73
     end
   end
 end

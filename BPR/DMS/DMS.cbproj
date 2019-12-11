@@ -62,8 +62,8 @@
         <ILINK_GenerateImportLibrary>true</ILINK_GenerateImportLibrary>
         <_TCHARMapping>wchar_t</_TCHARMapping>
         <SanitizedProjectName>DMS</SanitizedProjectName>
-        <IncludePath>..\..\Fontes\FL\;..\..\Fontes\TopologiaDMS\;..\..\Fontes\DMS\;..\..\DLL_Inc\;$(IncludePath)</IncludePath>
-        <ILINK_LibraryPath>..\..\Fontes\FL\;..\..\Fontes\TopologiaDMS\;..\..\Fontes\DMS\;..\..\DLL_Inc\;$(ILINK_LibraryPath)</ILINK_LibraryPath>
+        <IncludePath>..\..\Fontes\Uteis\;..\..\Fontes\FL\;..\..\Fontes\TopologiaDMS\;..\..\Fontes\DMS\;..\..\DLL_Inc\;$(IncludePath)</IncludePath>
+        <ILINK_LibraryPath>..\..\Fontes\Uteis\;..\..\Fontes\FL\;..\..\Fontes\TopologiaDMS\;..\..\Fontes\DMS\;..\..\DLL_Inc\;$(ILINK_LibraryPath)</ILINK_LibraryPath>
     </PropertyGroup>
     <PropertyGroup Condition="'$(Base_Win32)'!=''">
         <PackageImports>adortl;appanalytics;bcbie;bcbsmp;bindcomp;bindcompdbx;bindcompfmx;bindcompvcl;bindengine;CustomIPTransport;DataSnapClient;DataSnapCommon;DataSnapConnectors;DatasnapConnectorsFreePascal;DataSnapIndy10ServerTransport;DataSnapNativeClient;DataSnapProviderClient;DataSnapServer;DataSnapServerMidas;dbexpress;dbrtl;dbxcds;DbxClientDriver;DbxCommonDriver;DBXDb2Driver;DBXFirebirdDriver;DBXInformixDriver;DBXInterBaseDriver;DBXMSSQLDriver;DBXMySQLDriver;DBXOdbcDriver;DBXOracleDriver;DBXSqliteDriver;DBXSybaseASADriver;DBXSybaseASEDriver;dsnap;dsnapcon;dsnapxml;emsedge;emshosting;FireDACADSDriver;FireDACASADriver;FireDACCommonODBC;FireDACDb2Driver;FireDACDBXDriver;FireDACDSDriver;FireDACInfxDriver;FireDACMongoDBDriver;FireDACMSAccDriver;FireDACMSSQLDriver;FireDACMySQLDriver;FireDACODBCDriver;FireDACOracleDriver;FireDACPgDriver;FireDACTDataDriver;fmx;fmxase;fmxdae;fmxFireDAC;fmxobj;FMXTee;FmxTeeUI;frx25;frxDB25;frxe25;frxTee25;ibmonitor;ibxbindings;ibxpress;IndyCore;IndyIPClient;IndyIPCommon;IndyIPServer;IndyProtocols;IndySystem;inetdb;inetdbxpress;Intraweb;rtl;svn;Tee;TeeDB;TeeUI;tethering;vcl;vclactnband;vcldb;vcldsnap;vclFireDAC;vclib;vclie;vclimg;VCLRESTComponents;VclSmp;vcltouch;vclwinx;vclx;xmlrtl;$(PackageImports)</PackageImports>
@@ -145,9 +145,6 @@
             <BuildOrder>8</BuildOrder>
             <IgnorePath>true</IgnorePath>
         </LibFiles>
-        <None Include="..\..\Fontes\DMS\Modelos.h">
-            <BuildOrder>9</BuildOrder>
-        </None>
         <CppCompile Include="..\..\Fontes\DMS\TDMS.cpp">
             <DependentOn>..\..\Fontes\DMS\TDMS.h</DependentOn>
             <BuildOrder>7</BuildOrder>
@@ -160,6 +157,10 @@
         </CppCompile>
         <CppCompile Include="..\..\Fontes\DMS\TSincronizador.cpp">
             <DependentOn>..\..\Fontes\DMS\TSincronizador.h</DependentOn>
+            <BuildOrder>8</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="..\..\Fontes\Uteis\TMetodosAuxiliares.cpp">
+            <DependentOn>..\..\Fontes\Uteis\TMetodosAuxiliares.h</DependentOn>
             <BuildOrder>8</BuildOrder>
         </CppCompile>
         <FormResources Include="..\..\Fontes\DMS\TFormDMS.dfm"/>

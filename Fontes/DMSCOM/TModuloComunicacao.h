@@ -9,6 +9,7 @@
 #include <System.Win.ScktComp.hpp>
 //---------------------------------------------------------------------------
 class TFormDMSCOM;
+class TLeitorXML;
 //---------------------------------------------------------------------------
 class TModuloComunicacao : TObject
 {
@@ -16,19 +17,22 @@ public:
 	// Parâmetros
 	TFormDMSCOM* formDMSCOM;
 	TServerSocket *serverSkt;
-	TStringList* lisAux_Processos;
-	TStringList* lisAux_Processos_lidos;
-	int numProcessos;
+	int numAlarmes;
+	TLeitorXML* leitorXML;
+
+	TList* listaAlarmes;  //< lista com os novos alarmes enviados pelo front-end
+	TList* listaProcessos; //< lista com os processos ainda não lidos pelo DMS
+	TList* listaProcessos_lidos; //< lista com os processos lidos pelo DMS
 
 
 	// Métodos
 	__fastcall TModuloComunicacao(TFormDMSCOM* formDMSCOM);
 	__fastcall ~TModuloComunicacao();
-	void __fastcall AdicionarProcesso();
+	void __fastcall AdicionarAlarme();
 	void __fastcall IniciaServerSocket();
 
 	// Comunicação com o DMS
-	AnsiString __fastcall CONSULTACLIENT_SolicitacaoProcessoNaoLido();
+	void __fastcall CONSULTACLIENT_SolicitacaoProcessoNaoLido(TStringList* lisEXT);
 
 	// Eventos do server socket
 	void __fastcall serverSktClientConnect(TObject *Sender, TCustomWinSocket *Socket);

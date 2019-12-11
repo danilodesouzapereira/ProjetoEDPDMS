@@ -28,9 +28,3 @@ __fastcall TFormDMS::~TFormDMS()
    delete dms;
 }
 //---------------------------------------------------------------------------
-void __fastcall TFormDMS::Button1Click(TObject *Sender)
-{
-	dms->CONSULTA_COMUNICACAO_ConsultaEventoNovo();
-}
-//---------------------------------------------------------------------------
-

@@ -4,6 +4,39 @@
 //---------------------------------------------------------------------------
 #pragma package(smart_init)
 //---------------------------------------------------------------------------
+TDateTime __fastcall Timestamp_To_DateTime(String timestamp)
+{
+	if(timestamp == "") return(NULL);
+	unsigned short yr, mth, day, hr, min, seg, mseg;
+
+	yr = timestamp.SubString(1,4).ToInt();
+	mth = timestamp.SubString(5,2).ToInt();
+	day = timestamp.SubString(7,2).ToInt();
+	hr = timestamp.SubString(9,2).ToInt();
+	min = timestamp.SubString(11,2).ToInt();
+	seg = timestamp.SubString(13,2).ToInt();
+	mseg = 0;
+
+	TDateTime dt = TDateTime(yr, mth, day, hr, min, seg, mseg);
+	return(dt);
+}
+//---------------------------------------------------------------------------
+String __fastcall DateTime_To_Timestamp(TDateTime dt)
+{
+	unsigned short yr, mth, day, hr, min, seg, mseg;
+
+	dt.DecodeDate(&yr, &mth, &day);
+	dt.DecodeTime(&hr, &min, &seg, &mseg);
+
+	String timestamp = String(yr);
+	if(mth < 10) timestamp += "0" + String(mth); else timestamp += String(mth);
+	if(day < 10) timestamp += "0" + String(day); else timestamp += String(day);
+	if(hr < 10) timestamp += "0" + String(hr); else timestamp += String(hr);
+	if(min < 10) timestamp += "0" + String(min); else timestamp += String(min);
+	if(seg < 10) timestamp += "0" + String(seg); else timestamp += String(seg);
+	return(timestamp);
+}
+//---------------------------------------------------------------------------
 int __fastcall NumeroCampos(String linha, String separador)
 {
 	if(linha.SubString(linha.Length(), 1) != separador)

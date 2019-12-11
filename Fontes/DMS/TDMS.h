@@ -8,6 +8,10 @@
 #include <Vcl.ComCtrls.hpp>
 #include <System.Win.ScktComp.hpp>
 //---------------------------------------------------------------------------
+#include "..\Uteis\TMetodosAuxiliares.h"
+#include "..\Uteis\Modelos.h"
+#include "..\Uteis\Constantes.h"
+//---------------------------------------------------------------------------
 class TFormDMS;
 class TSincronizador;
 class VTEE;
@@ -33,9 +37,8 @@ public:
 		  __fastcall TDMS(VTApl* apl, TFormDMS* formDMS);
 		  __fastcall ~TDMS();
 
-	void __fastcall CONSULTA_COMUNICACAO_ConsultaEventoNovo();
 	void __fastcall IniciaProcessoEstimacao();
-	void __fastcall IniciaProcessoFL();
+	void __fastcall ExecutaProcessoFL(Processo* processoFL, SaidaFL* saidaFL);
 };
 //---------------------------------------------------------------------------
 #endif
