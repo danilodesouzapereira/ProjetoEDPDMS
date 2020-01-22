@@ -16,6 +16,7 @@ class TReleReligadora : public TRele
 public:
 	// Parâmetros elementares
 	TReligadora* religadora;
+	TList*       lisAlarmes;
 
 	// Métodos
 	__fastcall TReleReligadora(VTApl* apl, TReligadora* religadora);

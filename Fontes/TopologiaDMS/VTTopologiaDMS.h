@@ -13,6 +13,7 @@ class VTBloco;
 class VTChave;
 class VTLigacao;
 class VTRede;
+struct Processo;
 //---------------------------------------------------------------------------
 class VTTopologiaDMS : public TObject
 {
@@ -31,9 +32,12 @@ public:
 
 	virtual VTChave* __fastcall ChaveBloco(VTBloco* bloco) = 0;
 	virtual void     __fastcall DestroiEqptosTopologia() = 0;
+	virtual void     __fastcall DeterminaAreaBuscaFalta() = 0;
+	virtual void     __fastcall DeterminaAreaBuscaRompCabo(Processo* processoFL) = 0;
 	virtual void     __fastcall DeterminaBlocosRadiais() = 0;
 	virtual VTRede*  __fastcall DeterminaObjRede(String codigoRede) = 0;
-	virtual void     __fastcall IniciaTopologiaRede() = 0;
+	virtual void     __fastcall IniciaTopologiaRede(Processo* processoFL) = 0;
+	virtual void     __fastcall FinalizaTopologiaRede() = 0;
 	virtual void     __fastcall OrdenaBlocosRadiais() = 0;
 
 	// Métodos de busca

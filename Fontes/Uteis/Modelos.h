@@ -8,10 +8,23 @@ struct Alarme : public TObject
 	AnsiString localInstalacao;
 	int        tipoEqpto;
 	int        tipoAlarme;
+	bool       funcao50A;
+	bool       funcao50B;
+	bool       funcao50C;
+	bool       funcao50N;
+	bool       funcao51A;
+	bool       funcao51B;
+	bool       funcao51C;
+	bool       funcao51N;
+	double     correnteFalta;
+
 	__fastcall Alarme()
 	{
 		timeStamp = ""; codigoEqpto = "";
 		localInstalacao = ""; tipoEqpto = -1; tipoAlarme = -1;
+		funcao50A = funcao50B = funcao50C = funcao50N = false;
+		funcao51A = funcao51B = funcao51C = funcao51N = false;
+		correnteFalta = 0.;
 	}
 };
 //---------------------------------------------------------------------------

@@ -23,8 +23,7 @@ __fastcall TDMS::TDMS(VTApl* apl, TFormDMS* formDMS)
 	path = (VTPath*) apl->GetObject(__classid(VTPath));
 
 	// Inicializa a aplicação (EXE) de comunicação
-	AnsiString comando = path->DirDat() + "\\..\\Bin\\DMSCOM.exe";
-	comando = "C:\\Projetos\\SINAPgrid\\PlataformaSinap\\Tmp\\Bin\\Win32\\Debug\\DMSCOM.exe";
+	AnsiString comando = "C:\\Projetos\\SINAPgrid\\PlataformaSinap\\Tmp\\Bin\\Win32\\Debug\\DMSCOM.exe";
 	wchar_t* wchar_comando = new wchar_t[comando.Length()];
 	comando.WideChar(wchar_comando, comando.Length());
 	ShellExecute(0, NULL, wchar_comando, L"-l", 0, SW_SHOW);
@@ -35,6 +34,9 @@ __fastcall TDMS::TDMS(VTApl* apl, TFormDMS* formDMS)
 //---------------------------------------------------------------------------
 __fastcall TDMS::~TDMS()
 {
+	// Finaliza aplicação (EXE) de comunicação
+	system("taskkill /IM DMSCOM.exe");
+
 	// Destroi objetos
    delete sinc;
 }

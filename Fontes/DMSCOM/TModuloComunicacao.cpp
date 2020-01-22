@@ -3,6 +3,7 @@
 #include "TModuloComunicacao.h"
 #include "TLeitorXML.h"
 #include "TFormDMSCOM.h"
+#include "TRecepcaoAlarmes.h"
 #include "..\Uteis\Modelos.h"
 #include "..\Uteis\TMetodosAuxiliares.h"
 //---------------------------------------------------------------------------
@@ -21,22 +22,26 @@ __fastcall TModuloComunicacao::TModuloComunicacao(TFormDMSCOM* formDMSCOM)
 	listaProcessos_lidos = new TList;
 	numAlarmes = 0;
 
-	// :::::::::::::: TESTE: geração de um alarme através de leitura de XML
-	// Criação de obj de processo
-	Processo* processo = new Processo;
-	listaProcessos->Add(processo);
-	// Leitura dos alarmes a partir de XML
-	leitorXML = new TLeitorXML("C:\\Users\\Sinapsis\\Desktop", formDMSCOM);
-	leitorXML->LeAlarmes_StringCSV("Alarme1.xml", listaAlarmes);
-	// Lê o 1o alarme
-	Alarme* alarme = (Alarme*)listaAlarmes->Items[0];
-	processo->timeStamp = alarme->timeStamp;
-	processo->codigoAlimentador = alarme->codigoAlimentador;
-	processo->listaAlarmes->Add(alarme);
-	// Lê o 2o alarme
-	alarme = (Alarme*)listaAlarmes->Items[1];
-	processo->listaAlarmes->Add(alarme);
-	formDMSCOM->Memo2->Lines->Add(processo->timeStamp);
+	// Cria e inicia objeto de recepção de alarmees
+	recepcaoAlarmes = new TRecepcaoAlarmes(formDMSCOM, this);
+	recepcaoAlarmes->Inicia();
+
+//	// :::::::::::::: TESTE: geração de um alarme através de leitura de XML
+//	// Criação de obj de processo
+//	Processo* processo = new Processo;
+//	listaProcessos->Add(processo);
+//	// Leitura dos alarmes a partir de XML
+//	leitorXML = new TLeitorXML("C:\\Users\\Sinapsis\\Desktop", formDMSCOM);
+//	leitorXML->LeAlarmes_StringCSV("Alarme1.xml", listaAlarmes);
+//	// Lê o 1o alarme
+//	Alarme* alarme = (Alarme*)listaAlarmes->Items[0];
+//	processo->timeStamp = alarme->timeStamp;
+//	processo->codigoAlimentador = alarme->codigoAlimentador;
+//	processo->listaAlarmes->Add(alarme);
+//	// Lê o 2o alarme
+//	alarme = (Alarme*)listaAlarmes->Items[1];
+//	processo->listaAlarmes->Add(alarme);
+//	formDMSCOM->Memo2->Lines->Add(processo->timeStamp);
 }
 //---------------------------------------------------------------------------
 __fastcall TModuloComunicacao::~TModuloComunicacao()
@@ -120,7 +125,8 @@ void __fastcall TModuloComunicacao::serverSktClientRead(TObject *Sender, TCustom
 }
 //---------------------------------------------------------------------------
 // Método executado a partir de comando de solicitação do socket client do DMS
-// Formato: TIMESTAMP;CÓD. ALIMENTADOR;CÓD. EQPTO;TIPO EQPTO;TIPO ALARME;
+// Formato: TIMESTAMP;CÓD. ALIMENTADOR;CÓD. EQPTO;TIPO EQPTO;TIPO ALARME;50A;50B;50C;50N;
+// 51A;51B;51C;51N;Corrente_falta
 void __fastcall TModuloComunicacao::CONSULTACLIENT_SolicitacaoProcessoNaoLido(TStringList* lisEXT)
 {
 	if(!lisEXT || listaProcessos->Count == 0) return;
@@ -133,11 +139,21 @@ void __fastcall TModuloComunicacao::CONSULTACLIENT_SolicitacaoProcessoNaoLido(TS
 	{
 		Alarme* alarme = (Alarme*) processo->listaAlarmes->Items[i];
 
-		String linhaAlarme = alarme->timeStamp;                   // 0: timestamp
-		linhaAlarme += ";" + alarme->codigoAlimentador;     // 1: cód. alimentador
-		linhaAlarme += ";" + alarme->codigoEqpto;           // 2: cód. eqpto
-		linhaAlarme += ";" + String(alarme->tipoEqpto);     // 3: tipo eqpto
-		linhaAlarme += ";" + String(alarme->tipoAlarme);    // 4: tipo alarme
+		String linhaAlarme = alarme->timeStamp;                    // 0:  timestamp
+		linhaAlarme += ";" + alarme->codigoAlimentador;            // 1:  cód. alimentador
+		linhaAlarme += ";" + alarme->codigoEqpto;                  // 2:  cód. eqpto
+		linhaAlarme += ";" + String(alarme->tipoEqpto);            // 3:  tipo eqpto
+		linhaAlarme += ";" + String(alarme->tipoAlarme);           // 4:  tipo alarme
+		linhaAlarme += (alarme->funcao50A == true) ? ";1" : ";0";  // 5:  50A
+		linhaAlarme += (alarme->funcao50B == true) ? ";1" : ";0";  // 6:  50B
+		linhaAlarme += (alarme->funcao50C == true) ? ";1" : ";0";  // 7:  50C
+		linhaAlarme += (alarme->funcao50N == true) ? ";1" : ";0";  // 8:  50N
+		linhaAlarme += (alarme->funcao51A == true) ? ";1" : ";0";  // 9:  51A
+		linhaAlarme += (alarme->funcao51B == true) ? ";1" : ";0";  // 10: 51B
+		linhaAlarme += (alarme->funcao51C == true) ? ";1" : ";0";  // 11: 51C
+		linhaAlarme += (alarme->funcao51N == true) ? ";1" : ";0";  // 12: 51N
+		linhaAlarme += ";" + String((int)alarme->correnteFalta);   // 13: corrente de falta
+
 		if(i < processo->listaAlarmes->Count-1) linhaAlarme += "#";
 		lisEXT->Add(linhaAlarme);
 	}

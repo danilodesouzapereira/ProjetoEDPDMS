@@ -10,9 +10,13 @@ __fastcall TMedIntTrafo::TMedIntTrafo(VTApl* apl, TTrafo* trafo) : TMedInt(apl)
 {
    this->trafo = trafo;
 	tipoMedInt = eqptomedintTRAFO;
+
+	// Lista de alarmes associados ao medidor inteligente
+	lisAlarmes = new TList;
 }
 //---------------------------------------------------------------------------
 __fastcall TMedIntTrafo::~TMedIntTrafo()
 {
+	delete lisAlarmes;
 }
 //---------------------------------------------------------------------------

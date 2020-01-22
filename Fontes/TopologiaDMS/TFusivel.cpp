@@ -2,21 +2,24 @@
 #pragma hdrstop
 //---------------------------------------------------------------------------
 #include "enumeradores.h"
-#include "TReleDisjuntor.h"
+#include "TFusivel.h"
+#include "TEqptoAutomacao.h"
 //---------------------------------------------------------------------------
 #pragma package(smart_init)
 //---------------------------------------------------------------------------
-__fastcall TReleDisjuntor::TReleDisjuntor(VTApl* apl, TDisjuntor* disjuntor) : TRele(apl)
+__fastcall TFusivel::TFusivel(VTApl* apl, VTChave* chave) : TEqptoAutomacao(apl)
 {
-   this->disjuntor = disjuntor;
-	tipoEqptoDadoRele = eqptodadoreleDISJUNTOR;
+	tipoAutomacao = automacaoFUSIVEL;
+	this->chave = chave;
 
-	// Lista de alarmes associados ao relé do disjuntor
-	lisAlarmes = new TList;
+	// Listas de objetos TBlocoRad
+	lisBlocosRad_Jusante = new TList;
+	lisBlocosRad_ZonaProtecao = new TList;
 }
 //---------------------------------------------------------------------------
-__fastcall TReleDisjuntor::~TReleDisjuntor()
+__fastcall TFusivel::~TFusivel()
 {
-   delete lisAlarmes;
+	delete lisBlocosRad_Jusante;
+	delete lisBlocosRad_ZonaProtecao;
 }
 //---------------------------------------------------------------------------

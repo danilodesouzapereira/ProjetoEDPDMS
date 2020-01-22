@@ -73,7 +73,7 @@
         <VerInfo_Keys>CompanyName=;FileDescription=$(MSBuildProjectName);FileVersion=1.0.0.0;InternalName=;LegalCopyright=;LegalTrademarks=;OriginalFilename=;ProgramID=com.embarcadero.$(MSBuildProjectName);ProductName=$(MSBuildProjectName);ProductVersion=1.0.0.0;Comments=</VerInfo_Keys>
         <VerInfo_Locale>1033</VerInfo_Locale>
         <IncludePath>$(BDSINCLUDE)\windows\vcl;$(IncludePath)</IncludePath>
-        <ILINK_LibraryPath>C:\Projetos\SINAPgrid\PlataformaSinap\DLL_Lib\Win32\Release\;$(ILINK_LibraryPath)</ILINK_LibraryPath>
+        <ILINK_LibraryPath>Z:\SINAPgrid\PlataformaSinap\DLL_Lib\Win32\Release\;C:\Projetos\SINAPgrid\PlataformaSinap\DLL_Lib\Win32\Release\;$(ILINK_LibraryPath)</ILINK_LibraryPath>
     </PropertyGroup>
     <PropertyGroup Condition="'$(Base_Win64)'!=''">
         <PackageImports>adortl;appanalytics;bindcomp;bindcompdbx;bindcompfmx;bindcompvcl;bindengine;CustomIPTransport;DataSnapClient;DataSnapCommon;DataSnapConnectors;DatasnapConnectorsFreePascal;DataSnapIndy10ServerTransport;DataSnapNativeClient;DataSnapProviderClient;DataSnapServer;DataSnapServerMidas;dbexpress;dbrtl;dbxcds;DbxClientDriver;DbxCommonDriver;DBXDb2Driver;DBXFirebirdDriver;DBXInformixDriver;DBXInterBaseDriver;DBXMSSQLDriver;DBXMySQLDriver;DBXOdbcDriver;DBXOracleDriver;DBXSqliteDriver;DBXSybaseASADriver;DBXSybaseASEDriver;dsnap;dsnapcon;dsnapxml;emsedge;emshosting;FireDACADSDriver;FireDACASADriver;FireDACCommonODBC;FireDACDb2Driver;FireDACDBXDriver;FireDACDSDriver;FireDACInfxDriver;FireDACMongoDBDriver;FireDACMSAccDriver;FireDACMSSQLDriver;FireDACMySQLDriver;FireDACODBCDriver;FireDACOracleDriver;FireDACPgDriver;FireDACTDataDriver;fmx;fmxase;fmxdae;fmxFireDAC;fmxobj;FMXTee;FmxTeeUI;ibmonitor;ibxbindings;ibxpress;IndyCore;IndyIPClient;IndyIPCommon;IndyIPServer;IndyProtocols;IndySystem;inetdb;inetdbxpress;Intraweb;rtl;Tee;TeeDB;TeeUI;tethering;vcl;vclactnband;vcldb;vcldsnap;vclFireDAC;vclib;vclie;vclimg;VCLRESTComponents;VclSmp;vcltouch;vclwinx;vclx;xmlrtl;$(PackageImports)</PackageImports>
@@ -108,7 +108,7 @@
         <VerInfo_Locale>1033</VerInfo_Locale>
         <Manifest_File>(None)</Manifest_File>
         <FinalOutputDir>$(SINAP_BIN)\$(Platform)\$(Config)</FinalOutputDir>
-        <IncludePath>$(PROJETOS)\;$(ProjetoEDPSimplex)\..\;$(PROJETOS)\..\;$(ProjetoEDPDMS)\..\;$(ProjetoEDPDMS)\;..\..\Fontes\SinapToolKit\Socorro\;..\..\Fontes\SinapToolKit\Forms\;..\..\Fontes\SinapToolKit\;$(PROJETOS);$(SINAP);..\..\Fontes\DMS\;..\..\Fontes\EE\;$(IncludePath)</IncludePath>
+        <IncludePath>$(PROJETOS)\;$(PROJETOS)\..\;..\..\Fontes\SinapToolKit\Socorro\;..\..\Fontes\SinapToolKit\Forms\;..\..\Fontes\SinapToolKit\;$(SINAP);..\..\Fontes\DMS\;..\..\Fontes\EE\;$(IncludePath)</IncludePath>
         <IntermediateOutputDir>$(PROJETOS)\ProjetoEdpDMS\tmp\$(Platform)\$(Config)</IntermediateOutputDir>
         <Debugger_HostApplication>$(SINAP_BIN)\Win32\Debug\SINAPgrid.exe</Debugger_HostApplication>
     </PropertyGroup>
@@ -127,6 +127,10 @@
         <LinkPackageImports>rtl.bpi;vcl.bpi</LinkPackageImports>
     </PropertyGroup>
     <ItemGroup>
+        <LibFiles Include="..\..\..\PlataformaSinap\DLL_Lib\Win32\Release\BDihm.lib" Condition="'$(Platform)'=='Win32'">
+            <BuildOrder>25</BuildOrder>
+            <IgnorePath>true</IgnorePath>
+        </LibFiles>
         <LibFiles Include="..\..\..\PlataformaSinap\DLL_Lib\Win32\Release\Bloco.lib" Condition="'$(Platform)'=='Win32'">
             <BuildOrder>21</BuildOrder>
             <IgnorePath>true</IgnorePath>
@@ -139,9 +143,6 @@
             <BuildOrder>20</BuildOrder>
             <IgnorePath>true</IgnorePath>
         </LibFiles>
-        <None Include="enumeradores.h">
-            <BuildOrder>9</BuildOrder>
-        </None>
         <CppCompile Include="TopologiaDMS.cpp">
             <BuildOrder>1</BuildOrder>
         </CppCompile>
@@ -179,6 +180,10 @@
         <CppCompile Include="..\..\Fontes\TopologiaDMS\TEqptoTopologia.cpp">
             <DependentOn>..\..\Fontes\TopologiaDMS\TEqptoTopologia.h</DependentOn>
             <BuildOrder>12</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="..\..\Fontes\TopologiaDMS\TFusivel.cpp">
+            <DependentOn>..\..\Fontes\TopologiaDMS\TFusivel.h</DependentOn>
+            <BuildOrder>25</BuildOrder>
         </CppCompile>
         <CppCompile Include="..\..\Fontes\TopologiaDMS\TMedInt.cpp">
             <DependentOn>..\..\Fontes\TopologiaDMS\TMedInt.h</DependentOn>
@@ -252,8 +257,9 @@
                 </Excluded_Packages>
             </CPlusPlusBuilder.Personality>
             <Deployment Version="3">
-                <DeployFile Condition="'$(DynamicRTL)'=='true' And '$(Multithreaded)'=='true'" LocalName="$(BDS)\bin\cc32250mt.dll" Class="DependencyModule">
+                <DeployFile LocalName="..\..\..\PlataformaSinap\Tmp\Bin\Win32\Debug\TopologiaDMS.dll" Configuration="Debug" Class="ProjectOutput">
                     <Platform Name="Win32">
+                        <RemoteName>TopologiaDMS.dll</RemoteName>
                         <Overwrite>true</Overwrite>
                     </Platform>
                 </DeployFile>
@@ -292,9 +298,14 @@
                         <Overwrite>true</Overwrite>
                     </Platform>
                 </DeployFile>
-                <DeployFile LocalName="..\..\..\PlataformaSinap\Tmp\Bin\Win32\Debug\TopologiaDMS.dll" Configuration="Debug" Class="ProjectOutput">
+                <DeployFile LocalName="..\..\..\PlataformaSinap\Tmp\Bin\Win32\Debug\TopologiaDMS.tds" Configuration="Debug" Class="DebugSymbols">
                     <Platform Name="Win32">
-                        <RemoteName>TopologiaDMS.dll</RemoteName>
+                        <RemoteName>TopologiaDMS.tds</RemoteName>
+                        <Overwrite>true</Overwrite>
+                    </Platform>
+                </DeployFile>
+                <DeployFile Condition="'$(DynamicRTL)'=='true' And '$(Multithreaded)'=='true'" LocalName="$(BDS)\bin\cc32250mt.dll" Class="DependencyModule">
+                    <Platform Name="Win32">
                         <Overwrite>true</Overwrite>
                     </Platform>
                 </DeployFile>
@@ -305,12 +316,6 @@
                 </DeployFile>
                 <DeployFile Condition="'$(DynamicRTL)'=='true' And '$(Multithreaded)'=='true'" LocalName="$(BDS)\bin64\cc64250mt.dll" Class="DependencyModule">
                     <Platform Name="Win64">
-                        <Overwrite>true</Overwrite>
-                    </Platform>
-                </DeployFile>
-                <DeployFile LocalName="..\..\..\PlataformaSinap\Tmp\Bin\Win32\Debug\TopologiaDMS.tds" Configuration="Debug" Class="DebugSymbols">
-                    <Platform Name="Win32">
-                        <RemoteName>TopologiaDMS.tds</RemoteName>
                         <Overwrite>true</Overwrite>
                     </Platform>
                 </DeployFile>

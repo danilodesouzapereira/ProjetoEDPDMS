@@ -88,6 +88,8 @@ void __fastcall TSincronizador::timerTimer(TObject *Sender)
 	}
 	else if(statusSinc == sincLOCALIZACAO) // Execução do FL
 	{
+		timer->Enabled = false;
+
 		// Chama a execução do módulo de LF com o processoLF
 		SaidaFL* saidaFL = new SaidaFL;
 		dms->ExecutaProcessoFL(processoFL, saidaFL);
@@ -100,6 +102,8 @@ void __fastcall TSincronizador::timerTimer(TObject *Sender)
 
 		// Restaura o status do sincronizador para stand-by
 		statusSinc = sincSTANDBY;
+
+		timer->Enabled = true;
    }
 }
 //---------------------------------------------------------------------------
@@ -156,11 +160,26 @@ void __fastcall TSincronizador::AtualizaObjProcessoFL(String conteudoAlarme)
 
 	// Cria objeto de alarme
 	Alarme* alarme = new Alarme;
+
+	// Insere parâmetros gerais
 	alarme->timeStamp = ValorCampo(conteudoAlarme, indice++, ";");
 	alarme->codigoAlimentador = ValorCampo(conteudoAlarme, indice++, ";");
 	alarme->codigoEqpto = ValorCampo(conteudoAlarme, indice++, ";");
 	alarme->tipoEqpto = ValorCampo(conteudoAlarme, indice++, ";").ToInt();
 	alarme->tipoAlarme = ValorCampo(conteudoAlarme, indice++, ";").ToInt();
+
+	// Insere funções de proteção
+	alarme->funcao50A = (ValorCampo(conteudoAlarme, indice++, ";").ToInt() == 1);
+	alarme->funcao50B = (ValorCampo(conteudoAlarme, indice++, ";").ToInt() == 1);
+	alarme->funcao50C = (ValorCampo(conteudoAlarme, indice++, ";").ToInt() == 1);
+	alarme->funcao50N = (ValorCampo(conteudoAlarme, indice++, ";").ToInt() == 1);
+	alarme->funcao51A = (ValorCampo(conteudoAlarme, indice++, ";").ToInt() == 1);
+	alarme->funcao51B = (ValorCampo(conteudoAlarme, indice++, ";").ToInt() == 1);
+	alarme->funcao51C = (ValorCampo(conteudoAlarme, indice++, ";").ToInt() == 1);
+	alarme->funcao51N = (ValorCampo(conteudoAlarme, indice++, ";").ToInt() == 1);
+
+   // Insere corrente de falta
+	alarme->correnteFalta = ValorCampo(conteudoAlarme, indice++, ";").ToDouble();
 
 	// Adiciona o alarme à lista de alarmes do processo
 	processoFL->listaAlarmes->Add(alarme);

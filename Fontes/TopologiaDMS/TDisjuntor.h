@@ -9,6 +9,7 @@
 //---------------------------------------------------------------------------
 #include "TEqptoAutomacao.h"
 //---------------------------------------------------------------------------
+class TReleDisjuntor;
 class VTChave;
 //---------------------------------------------------------------------------
 class TDisjuntor : public TEqptoAutomacao
@@ -16,6 +17,10 @@ class TDisjuntor : public TEqptoAutomacao
 public:
 	// Parâmetros
 	VTChave* chave;
+	TReleDisjuntor* rele;
+
+	TList* lisBlocosRad_Jusante;
+	TList* lisBlocosRad_ZonaProtecao;
 
 	// Métodos
 	__fastcall TDisjuntor(VTApl* apl, VTChave* chave);

@@ -16,6 +16,7 @@ class TMedIntTrafo : public TMedInt
 public:
 	// Parâmetros elementares
 	TTrafo* trafo;
+	TList*  lisAlarmes;
 
 	// Métodos
 	__fastcall TMedIntTrafo(VTApl* apl, TTrafo* trafo);

@@ -1,6 +1,7 @@
 //---------------------------------------------------------------------------
 #pragma hdrstop
 #include "TMetodosAuxiliares.h"
+#include <StrUtils.hpp>
 //---------------------------------------------------------------------------
 #pragma package(smart_init)
 //---------------------------------------------------------------------------
@@ -107,5 +108,81 @@ double __fastcall Arredonda(double valIni, int ndigitos)
 
 	resp = (long)(valIni * base)/base;
    return resp;
+}
+//---------------------------------------------------------------------------
+bool __fastcall AlimentadoresIguais(String codigo1, String codigo2)
+{
+	if(codigo1 == "" || codigo2 == "") return(false);
+
+	codigo1 = ReplaceStr(codigo1, "-", "");
+	codigo1 = ReplaceStr(codigo1, " ", "");
+	if(codigo1.Length() == 8 && codigo1.SubString(1,1).UpperCase() == "R")
+		codigo1 = codigo1.SubString(2, codigo1.Length()-1);
+
+	codigo2 = ReplaceStr(codigo2, "-", "");
+	codigo2 = ReplaceStr(codigo2, " ", "");
+	if(codigo2.Length() == 8 && codigo2.SubString(1,1).UpperCase() == "R")
+		codigo2 = codigo2.SubString(2, codigo2.Length()-1);
+
+	return(codigo1 == codigo2);
+}
+//---------------------------------------------------------------------------
+bool __fastcall ChavesIguais(String codigo1, String codigo2)
+{
+	if(codigo1 == "" || codigo2 == "") return(false);
+
+	if(codigo1.Length() == 14) codigo1 = codigo1.SubString(1,13);
+	if(codigo2.Length() == 14) codigo2 = codigo2.SubString(1,13);
+
+	return(codigo1 == codigo2);
+}
+//---------------------------------------------------------------------------
+bool __fastcall TrafosIguais(String codigo1, String codigo2)
+{
+	if(codigo1 == "" || codigo2 == "") return(false);
+
+	if(codigo1.Length() == 14) codigo1 = codigo1.SubString(1,13);
+	if(codigo2.Length() == 14) codigo2 = codigo2.SubString(1,13);
+
+	return(codigo1 == codigo2);
+}
+//---------------------------------------------------------------------------
+void __fastcall CopiaObjetos(TList* lisOri, TList* lisFinal)
+{
+	if(!lisOri || !lisFinal) return;
+	for(int i=0; i<lisOri->Count; i++)
+	{
+		TObject* obj = (TObject*)lisOri->Items[i];
+		lisFinal->Add(obj);
+   }
+}
+//---------------------------------------------------------------------------
+bool __fastcall AlimentadorPertenceSubestacao(String codigoSE, String codigoAlimentador)
+{
+	if(codigoSE == "" || codigoAlimentador == "") return(false);
+
+	// Exemplo: SE: BIR, Alimentador: RBIR-1302
+	// Exemplo: SE: VVE, Alimentador: VVE03
+
+	return(AnsiContainsStr(codigoAlimentador, codigoSE));
+}
+//---------------------------------------------------------------------------
+void __fastcall NomesArquivosDiretorio(String folder, String extensaoArquivos, TStringList* listaArquivos)
+{
+	if(listaArquivos == NULL) return;
+
+	String search_path = folder + "/*." + extensaoArquivos;
+	WIN32_FIND_DATA fd;
+	HANDLE hFind = ::FindFirstFile(search_path.c_str(), &fd);
+   if(hFind != INVALID_HANDLE_VALUE) {
+      do {
+         // read all (real) files in current folder
+         // , delete '!' read other 2 default folder . and ..
+         if(! (fd.dwFileAttributes & FILE_ATTRIBUTE_DIRECTORY) ) {
+         listaArquivos->Add(fd.cFileName);
+      	}
+      }while(::FindNextFile(hFind, &fd));
+      ::FindClose(hFind);
+   }
 }
 //---------------------------------------------------------------------------

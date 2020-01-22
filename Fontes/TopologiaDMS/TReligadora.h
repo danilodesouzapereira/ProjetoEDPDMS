@@ -9,6 +9,7 @@
 //---------------------------------------------------------------------------
 #include "TEqptoAutomacao.h"
 //---------------------------------------------------------------------------
+class TReleReligadora;
 class VTChave;
 //---------------------------------------------------------------------------
 class TReligadora : public TEqptoAutomacao
@@ -16,6 +17,10 @@ class TReligadora : public TEqptoAutomacao
 public:
 	// Parâmetros
 	VTChave* chave;
+	TReleReligadora* rele;
+
+	TList* lisBlocosRad_Jusante;
+	TList* lisBlocosRad_ZonaProtecao;
 
 	// Métodos
 	__fastcall TReligadora(VTApl* apl, VTChave* chave);

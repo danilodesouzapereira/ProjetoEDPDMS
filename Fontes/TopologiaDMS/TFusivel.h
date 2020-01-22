@@ -1,27 +1,28 @@
 //---------------------------------------------------------------------------
-#ifndef TAreaH
-#define TAreaH
+#ifndef TFusivelH
+#define TFusivelH
 //---------------------------------------------------------------------------
 #include <System.Classes.hpp>
 #include <Vcl.Controls.hpp>
 #include <Vcl.StdCtrls.hpp>
 #include <Vcl.ComCtrls.hpp>
 //---------------------------------------------------------------------------
-#include "TEqptoTopologia.h"
+#include "TEqptoAutomacao.h"
 //---------------------------------------------------------------------------
-class VTApl;
+class VTChave;
 //---------------------------------------------------------------------------
-class TArea : public TEqptoTopologia
+class TFusivel : public TEqptoAutomacao
 {
 public:
-	// Parâmetros elementares
-	TList* lisBlocoRad;
+	// Parâmetros
+	VTChave* chave;
+
+	TList* lisBlocosRad_Jusante;
+	TList* lisBlocosRad_ZonaProtecao;
 
 	// Métodos
-	__fastcall TArea(VTApl* apl);
-	__fastcall TArea(VTApl* apl, TList* lisBlocosRad);
-	__fastcall ~TArea();
+	__fastcall TFusivel(VTApl* apl, VTChave* chave);
+	__fastcall ~TFusivel();
 };
-
 //---------------------------------------------------------------------------
 #endif

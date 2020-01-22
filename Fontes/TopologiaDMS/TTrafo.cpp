@@ -3,12 +3,14 @@
 //---------------------------------------------------------------------------
 #include "enumeradores.h"
 #include "TTrafo.h"
+#include "TMedIntTrafo.h"
 //---------------------------------------------------------------------------
 #pragma package(smart_init)
 //---------------------------------------------------------------------------
 __fastcall TTrafo::TTrafo(VTApl* apl, VTCarga* carga) : TEqptoTopologia(apl)
 {
-   this->carga = carga;
+	this->carga = carga;
+	medIntTrafo = NULL;
 }
 //---------------------------------------------------------------------------
 __fastcall TTrafo::~TTrafo()

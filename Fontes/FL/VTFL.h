@@ -30,8 +30,11 @@ public:
 
 	virtual void __fastcall CriaObjTopologia() = 0;
 	virtual void __fastcall ExecutaProcessoFL(Processo* processoFL) = 0;
-	virtual void __fastcall IniciaObjTopologia() = 0;
+	virtual void __fastcall ObjTopologia_Finaliza() = 0;
+	virtual void __fastcall ObjTopologia_Inicia() = 0;
+	virtual void __fastcall ObjTopologia_DeterminaAreaBusca() = 0;
 	virtual void __fastcall ObtemLocalizacao(SaidaFL* saidaFL) = 0;
+
 };
 //---------------------------------------------------------------------------
 VTFL* __fastcall NewObjFL(VTApl *apl);

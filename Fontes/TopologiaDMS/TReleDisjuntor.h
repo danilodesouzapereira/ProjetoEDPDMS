@@ -16,6 +16,7 @@ class TReleDisjuntor : public TRele
 public:
 	// Parâmetros elementares
 	TDisjuntor* disjuntor;
+	TList*      lisAlarmes;
 
 	// Métodos
 	__fastcall TReleDisjuntor(VTApl* apl, TDisjuntor* disjuntor);

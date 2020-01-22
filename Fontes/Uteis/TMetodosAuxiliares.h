@@ -20,6 +20,12 @@ String __fastcall ValorCampo(String linha, int iCampo, String separador);
 // Método envolvendo números
 double __fastcall Arredonda(double valIni, int ndigitos);
 
+bool __fastcall AlimentadoresIguais(String codigo1, String codigo2);
+bool __fastcall AlimentadorPertenceSubestacao(String codigoSE, String codigoAlimentador);
+bool __fastcall ChavesIguais(String codigo1, String codigo2);
+bool __fastcall TrafosIguais(String codigo1, String codigo2);
+void __fastcall NomesArquivosDiretorio(String folder, String extensaoArquivos, TStringList* listaArquivos);
 
+void __fastcall CopiaObjetos(TList* lisOri, TList* lisFinal);
 //---------------------------------------------------------------------------
 #endif

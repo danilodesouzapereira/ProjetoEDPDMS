@@ -10,9 +10,13 @@ __fastcall TReleReligadora::TReleReligadora(VTApl* apl, TReligadora* religadora)
 {
    this->religadora = religadora;
 	tipoEqptoDadoRele = eqptodadoreleRELIGADORA;
+
+	// Lista de alarmes associados à religadora
+	lisAlarmes = new TList;
 }
 //---------------------------------------------------------------------------
 __fastcall TReleReligadora::~TReleReligadora()
 {
+	delete lisAlarmes;
 }
 //---------------------------------------------------------------------------

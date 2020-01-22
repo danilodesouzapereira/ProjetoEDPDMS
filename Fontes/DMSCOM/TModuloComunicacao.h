@@ -10,6 +10,7 @@
 //---------------------------------------------------------------------------
 class TFormDMSCOM;
 class TLeitorXML;
+class TRecepcaoAlarmes;
 //---------------------------------------------------------------------------
 class TModuloComunicacao : TObject
 {
@@ -19,6 +20,7 @@ public:
 	TServerSocket *serverSkt;
 	int numAlarmes;
 	TLeitorXML* leitorXML;
+	TRecepcaoAlarmes* recepcaoAlarmes;
 
 	TList* listaAlarmes;  //< lista com os novos alarmes enviados pelo front-end
 	TList* listaProcessos; //< lista com os processos ainda não lidos pelo DMS

@@ -8,7 +8,7 @@
     <Transaction>2019/10/18 19:46:13.000.206,=Z:\SINAPgrid\ProjetoEdpDMS\DLL_Lib\Win32\Release\DMS.lib</Transaction>
   </Transactions>
 	<ProjectSortOrder AutoSort="0" SortType="0">
-    <File Path="..\..\..\ProjetoEdpDMS"/>
+    <File Path="..\..\..\ProjetoEDPDMS"/>
     <File Path="..\..\Fontes"/>
     <File Path="..\..\Fontes\SinapToolKit"/>
     <File Path="..\..\Fontes\SinapToolKit\Forms"/>

@@ -26,8 +26,6 @@ public:
 	VTApl*          apl;
 	VTTopologiaDMS* topologiaDMS;
 
-
-
 	// :::::::::::::::::::: Métodos ::::::::::::::::::::
 	// Construtor e destrutor
 		  __fastcall TFL(VTApl* apl);
@@ -35,8 +33,18 @@ public:
 
 	// Métodos principais
 	void __fastcall CriaObjTopologia();
+	int  __fastcall DefineTipoLocalizacao();
 	void __fastcall ExecutaProcessoFL(Processo* processoFL);
-	void __fastcall IniciaObjTopologia();
+
+   // Chamadas diretas ao objeto de topologia
+	void __fastcall ObjTopologia_DeterminaAreaBusca();
+	void __fastcall ObjTopologia_Finaliza();
+	void __fastcall ObjTopologia_Inicia();
+
+	// Métodos de localização
+	void __fastcall LOCALIZACAO_algoLF1();
+	void __fastcall LOCALIZACAO_algoLF2();
+	void __fastcall LOCALIZACAO_algoLF3();
 
 	// Geração do objetos de saída (solução da localização)
 	void __fastcall GeraObjetoSaida_Diagnostico();

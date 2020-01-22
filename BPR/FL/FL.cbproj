@@ -62,8 +62,8 @@
         <ILINK_GenerateImportLibrary>true</ILINK_GenerateImportLibrary>
         <_TCHARMapping>wchar_t</_TCHARMapping>
         <SanitizedProjectName>FL</SanitizedProjectName>
-        <IncludePath>..\..\Fontes\DMS\;..\..\Fontes\FL\;..\..\DLL_Inc\;$(IncludePath)</IncludePath>
-        <ILINK_LibraryPath>..\..\Fontes\DMS\;..\..\Fontes\FL\;..\..\DLL_Inc\;$(ILINK_LibraryPath)</ILINK_LibraryPath>
+        <IncludePath>..\..\Fontes\Uteis\;..\..\Fontes\DMS\;..\..\Fontes\FL\;..\..\DLL_Inc\;$(IncludePath)</IncludePath>
+        <ILINK_LibraryPath>..\..\Fontes\Uteis\;..\..\Fontes\DMS\;..\..\Fontes\FL\;..\..\DLL_Inc\;$(ILINK_LibraryPath)</ILINK_LibraryPath>
     </PropertyGroup>
     <PropertyGroup Condition="'$(Base_Win32)'!=''">
         <PackageImports>adortl;appanalytics;bcbie;bcbsmp;bindcomp;bindcompdbx;bindcompfmx;bindcompvcl;bindengine;CustomIPTransport;DataSnapClient;DataSnapCommon;DataSnapConnectors;DatasnapConnectorsFreePascal;DataSnapIndy10ServerTransport;DataSnapNativeClient;DataSnapProviderClient;DataSnapServer;DataSnapServerMidas;dbexpress;dbrtl;dbxcds;DbxClientDriver;DbxCommonDriver;DBXDb2Driver;DBXFirebirdDriver;DBXInformixDriver;DBXInterBaseDriver;DBXMSSQLDriver;DBXMySQLDriver;DBXOdbcDriver;DBXOracleDriver;DBXSqliteDriver;DBXSybaseASADriver;DBXSybaseASEDriver;dsnap;dsnapcon;dsnapxml;emsedge;emshosting;FireDACADSDriver;FireDACASADriver;FireDACCommonODBC;FireDACDb2Driver;FireDACDBXDriver;FireDACDSDriver;FireDACInfxDriver;FireDACMongoDBDriver;FireDACMSAccDriver;FireDACMSSQLDriver;FireDACMySQLDriver;FireDACODBCDriver;FireDACOracleDriver;FireDACPgDriver;FireDACTDataDriver;fmx;fmxase;fmxdae;fmxFireDAC;fmxobj;FMXTee;FmxTeeUI;frx25;frxDB25;frxe25;frxTee25;ibmonitor;ibxbindings;ibxpress;IndyCore;IndyIPClient;IndyIPCommon;IndyIPServer;IndyProtocols;IndySystem;inetdb;inetdbxpress;Intraweb;rtl;svn;Tee;TeeDB;TeeUI;tethering;vcl;vclactnband;vcldb;vcldsnap;vclFireDAC;vclib;vclie;vclimg;VCLRESTComponents;VclSmp;vcltouch;vclwinx;vclx;xmlrtl;$(PackageImports)</PackageImports>
@@ -108,8 +108,9 @@
         <VerInfo_Locale>1033</VerInfo_Locale>
         <Manifest_File>(None)</Manifest_File>
         <FinalOutputDir>$(SINAP_BIN)\$(Platform)\$(Config)</FinalOutputDir>
-        <IncludePath>$(PROJETOS)\;$(ProjetoEDPSimplex)\..\;$(PROJETOS)\..\;$(ProjetoEDPDMS)\..\;$(ProjetoEDPDMS)\;..\..\..\Rev4.0_XE\ProjetoEdp\Fontes\SinapToolKit\Socorro\;..\..\..\Rev4.0_XE\ProjetoEdp\Fontes\SinapToolKit\Forms\;..\..\..\Rev4.0_XE\ProjetoEdp\BPR\SinapToolKit\;..\..\Fontes\SinapToolKit\Socorro\;..\..\Fontes\SinapToolKit\Forms\;..\..\Fontes\SinapToolKit\;$(PROJETOS);$(SINAP);..\..\Fontes\EE\;$(IncludePath)</IncludePath>
+        <IncludePath>$(PROJETOS)\;$(ProjetoEDPSimplex)\..\;$(PROJETOS)\..\;$(ProjetoEDPDMS)\..\;$(ProjetoEDPDMS)\;..\..\Fontes\SinapToolKit\Socorro\;..\..\Fontes\SinapToolKit\Forms\;..\..\Fontes\SinapToolKit\;$(PROJETOS);$(SINAP);..\..\Fontes\EE\;..\..\Fontes\DMS\;..\..\Fontes\FL\;..\..\DLL_Inc\</IncludePath>
         <IntermediateOutputDir>$(PROJETOS)\ProjetoEdpDMS\tmp\$(Platform)\$(Config)</IntermediateOutputDir>
+        <ILINK_LibraryPath>Z:\SINAPgrid\ProjetoEdpDMS\DLL_Lib\Win32\Release;..\..\Fontes\DMS;..\..\Fontes\FL\;..\..\DLL_Inc\</ILINK_LibraryPath>
     </PropertyGroup>
     <PropertyGroup Condition="'$(Cfg_2)'!=''">
         <Defines>NDEBUG;$(Defines)</Defines>
@@ -146,6 +147,12 @@
         </CppCompile>
         <None Include="..\..\Fontes\FL\VTFL.h">
             <BuildOrder>5</BuildOrder>
+        </None>
+        <None Include="..\..\Fontes\Uteis\Constantes.h">
+            <BuildOrder>7</BuildOrder>
+        </None>
+        <None Include="..\..\Fontes\Uteis\enumeradores.h">
+            <BuildOrder>6</BuildOrder>
         </None>
         <BuildConfiguration Include="Release">
             <Key>Cfg_2</Key>

@@ -24,6 +24,8 @@ void __fastcall TLeitorXML::LeAlarmes_StringCSV(String nomeArquivo, TList* lisEX
 {
 	if(!lisEXT || nomeArquivo == "") return;
 
+	bool f50A, f50B, f50C, f50N, f51A, f51B, f51C, f51N;
+   double correnteFalta;
 	int TipoEqpto, TipoAlarme;
 	String TimeStamp, CodigoEqpto, CodigoAlimentador;
 	TXMLDocument* docXMLalarme;
@@ -66,19 +68,67 @@ void __fastcall TLeitorXML::LeAlarmes_StringCSV(String nomeArquivo, TList* lisEX
 			{
 				TipoAlarme = atributo->Text.ToInt();
 			}
-		}
 
-//		// Verificação
-//		if(TimeStamp == "" || CodAlimentador == "" || TipoEqpto == -1 || TipoAlarme == -1 || CodEqpto == "")
-//			continue;
+			else if(atributo->NodeName == "Funcao50A")
+			{
+				f50A = (atributo->Text == "True") ? true : false;
+			}
+			else if(atributo->NodeName == "Funcao50B")
+			{
+				f50B = (atributo->Text == "True") ? true : false;
+			}
+			else if(atributo->NodeName == "Funcao50C")
+			{
+				f50C = (atributo->Text == "True") ? true : false;
+			}
+			else if(atributo->NodeName == "Funcao50N")
+			{
+				f50N = (atributo->Text == "True") ? true : false;
+			}
+			else if(atributo->NodeName == "Funcao51A")
+			{
+				f51A = (atributo->Text == "True") ? true : false;
+			}
+			else if(atributo->NodeName == "Funcao51B")
+			{
+				f51B = (atributo->Text == "True") ? true : false;
+			}
+			else if(atributo->NodeName == "Funcao51C")
+			{
+				f51C = (atributo->Text == "True") ? true : false;
+			}
+			else if(atributo->NodeName == "Funcao51N")
+			{
+				f51N = (atributo->Text == "True") ? true : false;
+			}
+			else if(atributo->NodeName == "CorrenteFalta")
+			{
+				correnteFalta = atributo->Text.ToDouble();
+			}
+		}
 
 		// Cria obj de struct Alarme
 		Alarme* alarme = new Alarme;
+
+		// Insere dados gerais
 		alarme->timeStamp = TimeStamp;
 		alarme->codigoEqpto = CodigoEqpto;
 		alarme->codigoAlimentador = CodigoAlimentador;
 		alarme->tipoAlarme = TipoAlarme;
 		alarme->tipoEqpto = TipoEqpto;
+
+		// Insere funções de proteção
+		alarme->funcao50A = f50A;
+		alarme->funcao50B = f50B;
+		alarme->funcao50C = f50C;
+		alarme->funcao50N = f50N;
+		alarme->funcao51A = f51A;
+		alarme->funcao51B = f51B;
+		alarme->funcao51C = f51C;
+		alarme->funcao51N = f51N;
+
+		// Corrente de curto-circuito detectada
+		alarme->correnteFalta = correnteFalta;
 
 		lisEXT->Add(alarme);
 	}
